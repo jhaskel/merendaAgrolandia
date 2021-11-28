@@ -37,7 +37,7 @@ public class AfController {
                 ResponseEntity.noContent().build() :
                 ResponseEntity.ok(carros);
     }
-    @GetMapping("/despeda/{isdespesa}")
+    @GetMapping("/despesa/{isdespesa}")
     public ResponseEntity getIsDespesa(@PathVariable("isdespesa") Boolean isdespesa) {
         List<AfDTO> carros = service.getIsDespesa(isdespesa);
         return carros.isEmpty() ?
