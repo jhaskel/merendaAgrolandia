@@ -37,6 +37,15 @@ public class PedidoController {
                 ResponseEntity.ok(carros);
     }
 
+    @GetMapping("/isaf/{isaf}")
+    public ResponseEntity getIsAf(@PathVariable("isaf") Boolean isaf) {
+        List<PedidoDTO> carros = service.getIsAF(isaf);
+        return carros.isEmpty() ?
+                ResponseEntity.noContent().build() :
+                ResponseEntity.ok(carros);
+    }
+
+
     @GetMapping("/escola/{escola}")
     public ResponseEntity getCarrosByEscola(@PathVariable("escola") Long escola) {
         List<PedidoDTO> carros = service.getCarrosByEscola(escola);

@@ -32,6 +32,11 @@ public class PedidoService {
     }
 
 
+    public List<PedidoDTO> getIsAF(Boolean isaf) {
+        return rep.findIsAf(isaf).stream().map(PedidoDTO::create).collect(Collectors.toList());
+    }
+
+
     public List<PedidoDTO> getCarrosByEscola(Long escola) {
         return rep.findByEscola(escola).stream().map(PedidoDTO::create).collect(Collectors.toList());
     }
