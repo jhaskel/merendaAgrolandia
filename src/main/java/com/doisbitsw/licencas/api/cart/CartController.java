@@ -18,31 +18,34 @@ public class CartController {
 
     @GetMapping()
     public ResponseEntity get() {
-        List<CartDTO> carros = service.getCarros();
-        return ResponseEntity.ok(carros);
+        List<CartDTO> carts = service.getCart();
+        return ResponseEntity.ok(carts);
     }
 
     @GetMapping("/{id}")
     public ResponseEntity get(@PathVariable("id") Long id) {
-        CartDTO carro = service.getCarroById(id);
-
-        return ResponseEntity.ok(carro);
+        CartDTO cart = service.getCartById(id);
+        return ResponseEntity.ok(cart);
     }
 
 
-    @GetMapping("/escola/{escola}")
-    public ResponseEntity getCarrosByEscola(@PathVariable("escola") Long escola) {
-        List<CartDTO> carros = service.getCarrosByEscola(escola);
-        return carros.isEmpty() ?
+    @GetMapping("/local/{local}")
+    public ResponseEntity getCartsByLocal(@PathVariable("local") Long local) {
+        List<CartDTO> carts = service.getCartsByLocal(local);
+        return carts.isEmpty() ?
                 ResponseEntity.noContent().build() :
-                ResponseEntity.ok(carros);
+                ResponseEntity.ok(carts);
     }
 
-    @GetMapping("/itensCart/{escola}")
-    public double getRep(@PathVariable("escola") Long escola) {
-        return service.getSoma(escola);
+    @GetMapping("/itensCart/{local}")
+    public double getRep(@PathVariable("local") Long local) {
+        return service.getSoma(local);
     }
 
+    @GetMapping("/cart/{produto}")
+    public double getCart(@PathVariable("produto") Long produto) {
+        return service.getCart(produto);
+    }
 
 
     @PostMapping
@@ -72,10 +75,10 @@ public class CartController {
                 ResponseEntity.notFound().build();
     }
 
+
     @DeleteMapping("/{id}")
     public ResponseEntity delete(@PathVariable("id") Long id) {
         service.delete(id);
-
         return ResponseEntity.ok().build();
     }
 }

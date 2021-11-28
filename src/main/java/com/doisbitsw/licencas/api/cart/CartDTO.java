@@ -6,24 +6,18 @@ import org.modelmapper.ModelMapper;
 @Data
 public class CartDTO {
     private Long id;
-    private Long escola;
-    private Long comprador;
+    private Long local;
     private Long produto;
+    private Long fornecedor;
+    private Long categoria;
+    private Long licitacao;
+    private String unidade;
+    private String cod;
     private String alias;
     private Double quantidade;
     private Double valor;
     private Double total;
-    private String obs;
-    private Long alunos;
-    private String unidade;
-    private String created;
-    private Boolean ativo;
-    private Boolean isagro;
-    private Long categoria;
-    private Long fornecedor;
-    private Long ano;
-    private String image;
-    private String cod;
+    private String createdAt;
 
     public static CartDTO create(Cart cart) {
         ModelMapper modelMapper = new ModelMapper();

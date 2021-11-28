@@ -25,6 +25,7 @@ public class ProdutoDTO {
     private String created;
     private String modified;
     private String processo;
+    private Boolean disponivel;
 
     public static ProdutoDTO create(Produto produto) {
         ModelMapper modelMapper = new ModelMapper();
