@@ -220,7 +220,9 @@ public class ItensService {
         return rep.findEstoque(id);
     }
 
-
+    public double getFamiliar(Long ano){
+        return rep.findFamiliar(ano);
+    }
 
 
 

@@ -297,6 +297,11 @@ public class ItensController {
         return service.getEstoque(id);
     }
 
+    @GetMapping("/familiar/{ano}")
+    public double getFamiliar(@PathVariable("ano") Long ano) {
+        return service.getFamiliar(ano);
+    }
+
 
     @PostMapping
     public ResponseEntity post(@RequestBody Itens pedidoItens) {
