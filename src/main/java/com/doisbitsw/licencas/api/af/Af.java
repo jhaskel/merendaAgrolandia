@@ -24,6 +24,7 @@ public class Af {
     private String created;
     private Boolean isautorizado;
     private Boolean ativo;
+    private Boolean isdespesa;
     private String status;
     private String pedido;
     private Double total;

@@ -37,6 +37,13 @@ public class AfController {
                 ResponseEntity.noContent().build() :
                 ResponseEntity.ok(carros);
     }
+    @GetMapping("/despeda/{isdespesa}")
+    public ResponseEntity getIsDespesa(@PathVariable("isdespesa") Boolean isdespesa) {
+        List<AfDTO> carros = service.getIsDespesa(isdespesa);
+        return carros.isEmpty() ?
+                ResponseEntity.noContent().build() :
+                ResponseEntity.ok(carros);
+    }
 
     @GetMapping("/af")
     public long getAf() {

@@ -31,6 +31,11 @@ public class AfService {
     public List<AfDTO> getByFornecedor(Long fornecedor) {
         return rep.findByFornecedor(fornecedor).stream().map(AfDTO::create).collect(Collectors.toList());
     }
+
+
+    public List<AfDTO> getIsDespesa(Boolean isdespesa) {
+        return rep.findIsDespesa(isdespesa).stream().map(AfDTO::create).collect(Collectors.toList());
+    }
     public long getAf(){
         return rep.findAf();
     }
@@ -65,6 +70,7 @@ public class AfService {
             db.setDespesa(af.getDespesa());
             db.setDespesax(af.getDespesax());
             db.setNumero(af.getNumero());
+            db.setIsdespesa(af.getIsdespesa());
 
 
 
