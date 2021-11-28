@@ -38,7 +38,7 @@ public class PedidoController {
     }
 
     @GetMapping("/check/{ischeck}")
-    public ResponseEntity getIsAf(@PathVariable("isaf") Boolean ischeck) {
+    public ResponseEntity getIsAf(@PathVariable("ischeck") Boolean ischeck) {
         List<PedidoDTO> carros = service.getIsAF(ischeck);
         return carros.isEmpty() ?
                 ResponseEntity.noContent().build() :
