@@ -30,6 +30,7 @@ public class Produto {
     private String escolas;
     private Long ano;
     private Boolean ativo;
+    private Boolean disponivel;
     private String created;
     private String modified;
     private String processo;

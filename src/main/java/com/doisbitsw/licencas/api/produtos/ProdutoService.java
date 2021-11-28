@@ -73,6 +73,7 @@ public class ProdutoService {
             db.setEscolas(produto.getEscolas());
             db.setAtivo(produto.getAtivo());
             db.setValor(produto.getValor());
+            db.setDisponivel(produto.getDisponivel());
 
             System.out.println("Carro id " + db.getId());
 
