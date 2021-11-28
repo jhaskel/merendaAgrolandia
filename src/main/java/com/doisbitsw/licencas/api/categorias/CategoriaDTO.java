@@ -9,6 +9,7 @@ public class CategoriaDTO {
     private String nome;
     private String image;
     private Boolean isativo;
+    private Boolean isalimento;
 
 
     public static CategoriaDTO create(Categoria categoria) {

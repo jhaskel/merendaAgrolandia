@@ -19,6 +19,8 @@ public class Categoria {
     private String nome;
     private String image;
     private Boolean isativo;
+    private Boolean isalimento;
+
 
 
 
