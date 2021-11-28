@@ -37,6 +37,12 @@ public class PedidoService {
     }
 
 
+    public long getPedidoSemAf(){
+        return rep.findPedidoSemAf();
+    }
+
+
+
     public List<PedidoDTO> getCarrosByEscola(Long escola) {
         return rep.findByEscola(escola).stream().map(PedidoDTO::create).collect(Collectors.toList());
     }

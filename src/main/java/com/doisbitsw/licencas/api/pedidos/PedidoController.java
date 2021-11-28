@@ -60,6 +60,12 @@ public class PedidoController {
     }
 
 
+    @GetMapping("/pedidoSemAf")
+    public long getPedidoSemAf() {
+        return service.getPedidoSemAf();
+    }
+
+
     @PostMapping
 
     public ResponseEntity post(@RequestBody Pedido pedido) {
