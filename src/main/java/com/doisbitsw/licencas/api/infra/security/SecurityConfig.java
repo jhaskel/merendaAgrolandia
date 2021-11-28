@@ -44,7 +44,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.cors().configurationSource(request -> new CorsConfiguration().applyPermitDefaultValues())
                 .and()
                 .authorizeRequests()
-                .antMatchers(HttpMethod.GET, "/api/v1/users","/email","/api/v1/login","/api/v1/usuarios","/sendmail/{email}","/api/v1/email","/api/v2/carros","/api/v2/escolas","/api/v1/itens/total/{ano}","/api/v1/escolas/quantAlunos","/api/v1/itens/tradicional/{ano}","/api/v1/itens/familiar/{$ano}","/api/v1/pnae/soma/{$ano}","/api/v1/pedidos/pedidoSemAf","/api/v1/af/afEnviada","/api/v1/totalMesEscola/{escola}/{ano}","/api/v1/totalCategoriaEscola/{escola}/{ano}","/api/v1/itens/totalEscolas/{ano}","/api/v1/itens/mediaAlunos/{ano}","/api/v1/itens/totalCategoriaEscola/{escola}/{ano}","/api/v1/itens/totalMesEscola/{escola}/{ano}")
+                .antMatchers(HttpMethod.GET, "/api/v1/users","/email","/api/v1/login","/api/v1/usuarios","/sendmail/{email}","/api/v1/email","/api/v2/carros","/api/v2/escolas","/api/v1/itens/total/{ano}","/api/v1/escolas/quantAlunos","/api/v1/itens/tradicional/{ano}","/api/v1/itens/familiar/{$ano}","/api/v1/pnae/soma/{$ano}","/api/v1/pedidos/pedidoSemAf","/api/v1/af/afEnviada","/api/v1/totalMesEscola/{escola}/{ano}","/api/v1/totalCategoriaEscola/{escola}/{ano}","/api/v1/itens/totalEscolas/{ano}","/api/v1/itens/mediaAlunos/{ano}","/api/v1/itens/totalCategoriaEscola/{escola}/{ano}","/api/v1/itens/totalMesEscola/{escola}/{ano}","/api//v1/itens/totalMes/{ano}")
                 .permitAll()
                 .antMatchers(HttpMethod.POST, "/api/v1/usuarios","/email","/api/v1/empreendedor","/api/v1/carros")
                 .permitAll()
