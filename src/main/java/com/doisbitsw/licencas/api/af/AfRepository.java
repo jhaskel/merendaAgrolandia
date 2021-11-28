@@ -22,5 +22,9 @@ public interface AfRepository extends JpaRepository<Af, Long> {
     @Query(value = "SELECT COUNT(id) as total FROM af WHERE ativo = TRUE AND isautorizado = false", nativeQuery = true)
     long findAf();
 
+    @Query(value = "SELECT COUNT(id) as total FROM af WHERE isativo = TRUE AND isenviado = false", nativeQuery = true)
+    long findAfEnviada();
+
+
 
 }

@@ -31,6 +31,9 @@ public class AfService {
     public List<AfDTO> getByFornecedor(Long fornecedor) {
         return rep.findByFornecedor(fornecedor).stream().map(AfDTO::create).collect(Collectors.toList());
     }
+    public long getAfEnviada(){
+        return rep.findAfEnviada();
+    }
 
 
     public List<AfDTO> getIsDespesa(Boolean isdespesa) {

@@ -50,6 +50,11 @@ public class AfController {
         return service.getAf();
     }
 
+    //soma o total e afs eviadas para os fornecedores
+    @GetMapping("/afEnviada")
+    public long getAfEnviada() {
+        return service.getAfEnviada();
+    }
 
 
 
