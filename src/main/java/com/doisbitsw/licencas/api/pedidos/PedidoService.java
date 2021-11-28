@@ -32,8 +32,8 @@ public class PedidoService {
     }
 
 
-    public List<PedidoDTO> getIsAF(Boolean isaf) {
-        return rep.findIsAf(isaf).stream().map(PedidoDTO::create).collect(Collectors.toList());
+    public List<PedidoDTO> getIsAF(Boolean ischeck) {
+        return rep.findIsAf(ischeck).stream().map(PedidoDTO::create).collect(Collectors.toList());
     }
 
 
