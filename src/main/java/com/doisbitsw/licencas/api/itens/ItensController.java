@@ -203,6 +203,14 @@ public class ItensController {
                 ResponseEntity.noContent().build() :
                 ResponseEntity.ok(carros);
     }
+    //verificado
+    @GetMapping("/produto/{produto}")
+    public ResponseEntity getProduto(@PathVariable("produto") Long produto) {
+        List<ItensDTO> itens = service.getProduto(produto);
+        return itens.isEmpty() ?
+                ResponseEntity.noContent().build() :
+                ResponseEntity.ok(itens);
+    }
 
 
     @GetMapping("/total/{ano}")

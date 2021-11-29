@@ -258,5 +258,16 @@ public interface ItensRepository extends JpaRepository<Itens, Long> {
             "AND cat.isalimento = TRUE AND pro.agrofamiliar = true", nativeQuery = true)
     double findFamiliar(Long ano);
 
+    //verificado
+    @Query(value = "SELECT ite.*,SUM(ite.quantidade) AS tot ,esc.alias AS nomec\n" +
+            "from itens ite \n" +
+            "INNER join estoque pro ON pro.id = ite.produto\n" +
+            "INNER JOIN unidades esc ON esc.id = ite.local\n" +
+            "WHERE ite.produto = :produto and ite.af >0 \n" +
+            "GROUP BY ite.local\n" +
+            "ORDER BY tot desc", nativeQuery = true)
+    List<Itens> findProduto(Long produto);
+
+
 }
 

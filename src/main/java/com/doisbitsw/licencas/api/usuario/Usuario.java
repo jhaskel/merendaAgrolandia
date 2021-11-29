@@ -26,6 +26,7 @@ public class Usuario {
     private Boolean ativo;
     private String created;
     private String modified;
+    private Long setor;
 
 
 

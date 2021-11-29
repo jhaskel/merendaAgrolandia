@@ -224,6 +224,11 @@ public class ItensService {
         return rep.findFamiliar(ano);
     }
 
+    //verificado
+    public List<ItensDTO> getProduto(Long produto) {
+        return rep.findProduto(produto).stream().map(ItensDTO::create).collect(Collectors.toList());
+    }
+
 
 
 
