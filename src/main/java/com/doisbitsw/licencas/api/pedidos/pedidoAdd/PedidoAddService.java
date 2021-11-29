@@ -1,6 +1,6 @@
 package com.doisbitsw.licencas.api.pedidos.pedidoAdd;
 
-import com.merenda.merenda.api.infra.exception.ObjectNotFoundException;
+import com.doisbitsw.licencas.api.infra.exception.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
