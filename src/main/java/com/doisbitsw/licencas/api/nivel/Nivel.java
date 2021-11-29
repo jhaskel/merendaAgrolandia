@@ -16,6 +16,7 @@ public class Nivel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private Long setor;
     private String nome;
     private Boolean ativo;
     private String created;

@@ -41,6 +41,13 @@ public class NivelController {
                 ResponseEntity.noContent().build() :
                 ResponseEntity.ok(carros);
     }
+    @GetMapping("/setor/{setor}")
+    public ResponseEntity getSetor(@PathVariable("setor") Long setor) {
+        List<NivelDTO> itens = service.getSetor(setor);
+        return itens.isEmpty() ?
+                ResponseEntity.noContent().build() :
+                ResponseEntity.ok(itens);
+    }
 
 
 

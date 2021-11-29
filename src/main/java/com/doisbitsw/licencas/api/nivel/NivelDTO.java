@@ -6,6 +6,7 @@ import org.modelmapper.ModelMapper;
 @Data
 public class NivelDTO {
     private Long id;
+    private Long setor;
     private String nome;
     private Boolean ativo;
     private String created;

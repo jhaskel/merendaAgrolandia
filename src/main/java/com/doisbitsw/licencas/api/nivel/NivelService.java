@@ -32,6 +32,10 @@ public class NivelService {
     public List<NivelDTO> getId(Long id) {
         return rep.findId(id).stream().map(NivelDTO::create).collect(Collectors.toList());
     }
+    //verificado
+    public List<NivelDTO> getSetor(Long setor) {
+        return rep.findSetor(setor).stream().map(NivelDTO::create).collect(Collectors.toList());
+    }
 
 
     public NivelDTO insert(Nivel nivel) {

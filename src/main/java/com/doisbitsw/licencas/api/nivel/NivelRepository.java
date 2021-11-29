@@ -13,4 +13,7 @@ public interface NivelRepository extends JpaRepository<Nivel, Long> {
     @Query(value = "select * from nivel_escolar where id = :id", nativeQuery = true)
     List<Nivel> findId(Long id);
 
+    @Query(value = "select * from nivel where setor = :setor", nativeQuery = true)
+    List<Nivel> findSetor(Long setor);
+
 }
