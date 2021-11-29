@@ -10,7 +10,8 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/nivel")
-public class NivelEscolarController {
+
+public class NivelController {
     @Autowired
     private NivelService service;
 
