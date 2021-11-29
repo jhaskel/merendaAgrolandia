@@ -7,23 +7,17 @@ import org.modelmapper.ModelMapper;
 public class AfDTO {
     private Long id;
     private Long code;
-    private Long fornecedor;
-    private String nomefornecedor;
-    private Long nivel;
-    private String nomenivel;
-    private String created;
-    private Boolean isautorizado;
-    private String status;
-    private Boolean ativo;
-    private String pedido;
-    private Double total;
-    private Long despesa;
-    private Long despesax;
-    private String numero;
-    private Boolean isdespesa;
     private Long setor;
+    private Long nivel;
+    private Long fornecedor;
+    private String status;
+    private Boolean isenviado;
+    private String createdAt;
+    private Boolean isativo;
 
-    private Long totalAf;
+    //não esta no banco
+    private String nomefor;
+    private Double tot;
 
 
     public static AfDTO create(Af af) {

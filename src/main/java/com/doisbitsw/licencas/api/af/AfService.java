@@ -15,32 +15,25 @@ public class AfService {
     @Autowired
 
     private AfRepository rep;
-    public List<AfDTO> getCarros() {
+
+    public List<AfDTO> getAf() {
         List<AfDTO> list = rep.findAll().stream().map(AfDTO::create).collect(Collectors.toList());
+        return list;
+    }
+    public List<AfDTO> getAll() {
+        List<AfDTO> list = rep.findAll2().stream().map(AfDTO::create).collect(Collectors.toList());
         return list;
     }
 
 
-
-    public AfDTO getCarroById(Long id) {
+    public AfDTO getAfById(Long id) {
         Optional<Af> carro = rep.findById(id);
-        return carro.map(AfDTO::create).orElseThrow(() -> new ObjectNotFoundException("Carro não encontrado"));
+        return carro.map(AfDTO::create).orElseThrow(() -> new ObjectNotFoundException("Af não encontrado"));
     }
 
 
     public List<AfDTO> getByFornecedor(Long fornecedor) {
         return rep.findByFornecedor(fornecedor).stream().map(AfDTO::create).collect(Collectors.toList());
-    }
-    public long getAfEnviada(){
-        return rep.findAfEnviada();
-    }
-
-
-    public List<AfDTO> getIsDespesa(Boolean isdespesa) {
-        return rep.findIsDespesa(isdespesa).stream().map(AfDTO::create).collect(Collectors.toList());
-    }
-    public long getAf(){
-        return rep.findAf();
     }
 
 
@@ -48,6 +41,14 @@ public class AfService {
         return rep.findSetor(setor).stream().map(AfDTO::create).collect(Collectors.toList());
     }
 
+
+    public List<AfDTO> getByFornecedorTest(Long fornecedor) {
+        return rep.findByFornecedorTest(fornecedor).stream().map(AfDTO::create).collect(Collectors.toList());
+    }
+
+    public long getAfEnviada(){
+        return rep.findAfEnviada();
+    }
 
     public AfDTO insert(Af af) {
         Assert.isNull(af.getId(),"Não foi possível inserir o registro");
@@ -64,23 +65,9 @@ public class AfService {
             // Copiar as propriedades
             db.setCode(af.getCode());
             db.setFornecedor(af.getFornecedor());
-            db.setNomefornecedor(af.getNomefornecedor());
-            db.setNivel(af.getNivel());
-            db.setFornecedor(af.getFornecedor());
-            db.setNivel(af.getNivel());
-            db.setNomenivel(af.getNomenivel());
-            db.setCreated(af.getCreated());
-            db.setIsautorizado(af.getIsautorizado());
+            db.setIsenviado(af.getIsenviado());
             db.setStatus(af.getStatus());
-            db.setAtivo(af.getAtivo());
-            db.setPedido(af.getPedido());
-            db.setTotal(af.getTotal());
-            db.setDespesa(af.getDespesa());
-            db.setDespesax(af.getDespesax());
-            db.setNumero(af.getNumero());
-            db.setIsdespesa(af.getIsdespesa());
-
-
+            db.setIsativo(af.getIsativo());
 
             System.out.println("Af id " + db.getId());
 
@@ -94,10 +81,8 @@ public class AfService {
         }
     }
 
-
     public void delete(Long id) {
         rep.deleteById(id);
     }
-
 
 }

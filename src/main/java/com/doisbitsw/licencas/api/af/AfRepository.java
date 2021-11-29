@@ -5,33 +5,37 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
-
 public interface AfRepository extends JpaRepository<Af, Long> {
-    @Query(value = "SELECT * FROM af WHERE ativo = TRUE ORDER BY id desc", nativeQuery = true)
-    List<Af> findAll();
-
-    @Query(value = "SELECT * FROM af\n" +
-            " WHERE fornecedor = :fornecedor AND ativo = TRUE AND isautorizado = true order by id desc", nativeQuery = true)
-    List<Af> findByFornecedor(Long fornecedor);
-
-    @Query(value = "SELECT * FROM af\n" +
-            " WHERE isdespesa = :isdespesa AND ativo = TRUE  order by id desc", nativeQuery = true)
-    List<Af> findIsDespesa(Boolean isdespesa);
-
-
-    @Query(value = "SELECT COUNT(id) as total FROM af WHERE ativo = TRUE AND isautorizado = false", nativeQuery = true)
-    long findAf();
-
-    @Query(value = "SELECT COUNT(id) as total FROM af WHERE ativo = TRUE AND isdespesa = true", nativeQuery = true)
-    long findAfEnviada();
-
     @Query(value = "SELECT af.*,SUM(ite.total) as tot,forn.alias as nomefor FROM af \n" +
             "INNER JOIN itens ite ON ite.af = af.code\n" +
             "INNER JOIN fornecedor forn ON forn.id = ite.fornecedor\n" +
-            "WHERE ite.setor = 1\n" +
-            "GROUP BY af.code order by af.isdespesa, af.id", nativeQuery = true)
+            "GROUP BY af.code order by af.isenviado, af.id desc ", nativeQuery = true)
+    List<Af> findAll2();
+
+    @Query(value = "SELECT af.*,SUM(ite.total) as tot,forn.nome as nomefor FROM af \n" +
+            "            INNER JOIN itens ite ON ite.af = af.code\n" +
+            "            INNER JOIN fornecedor forn ON forn.id = ite.fornecedor\n" +
+            "            WHERE forn.id = :fornecedor\n" +
+            "            GROUP BY af.code order by af.isenviado, af.id desc", nativeQuery = true)
+    List<Af> findByFornecedor(Long fornecedor);
+
+    @Query(value = "SELECT af.*,SUM(ite.total) as tot,forn.alias as nomefor FROM af \n" +
+            "            INNER JOIN itens ite ON ite.af = af.code\n" +
+            "            INNER JOIN fornecedor forn ON forn.id = ite.fornecedor\n" +
+            "            WHERE ite.setor = :setor\n" +
+            "            GROUP BY af.code order by af.isenviado, af.id desc", nativeQuery = true)
     List<Af> findSetor(Long setor);
 
+    //somente para testes
+    @Query(value = "SELECT * FROM af WHERE fornecedor = :fornecedor", nativeQuery = true)
+    List<Af> findByFornecedorTest(Long fornecedor);
+
+    @Query(value = "SELECT ite.* FROM itens ite\n" +
+            "WHERE af = :af order by id desc", nativeQuery = true)
+    List<Af> findByAf(Long af);
+
+    @Query(value = "SELECT COUNT(id) as total FROM af WHERE isativo = TRUE AND isenviado = false", nativeQuery = true)
+    long findAfEnviada();
 
 
 }
