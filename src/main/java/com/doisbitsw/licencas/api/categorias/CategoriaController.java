@@ -34,6 +34,13 @@ public class CategoriaController {
                 ResponseEntity.noContent().build() :
                 ResponseEntity.ok(carros);
     }
+    @GetMapping("/id/{id}")
+    public ResponseEntity getCategoriaId(@PathVariable("id") Long id) {
+        List<CategoriaDTO> categoria = service.getCategoriaId(id);
+        return categoria.isEmpty() ?
+                ResponseEntity.noContent().build() :
+                ResponseEntity.ok(categoria);
+    }
 
 
 

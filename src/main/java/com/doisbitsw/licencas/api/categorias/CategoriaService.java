@@ -26,6 +26,11 @@ public class CategoriaService {
     }
 
 
+    public List<CategoriaDTO> getCategoriaId(Long id) {
+        return rep.findId(id).stream().map(CategoriaDTO::create).collect(Collectors.toList());
+    }
+
+
     public List<CategoriaDTO> getAtivo() {
         return rep.findAtivo().stream().map(CategoriaDTO::create).collect(Collectors.toList());
     }
