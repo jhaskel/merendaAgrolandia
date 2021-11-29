@@ -14,6 +14,9 @@ public class AfDTO {
     private Boolean isenviado;
     private String createdAt;
     private Boolean isativo;
+    private Long despesa;
+    private Long despesax;
+    private Boolean isdespesa;
 
     //não esta no banco
     private String nomefor;

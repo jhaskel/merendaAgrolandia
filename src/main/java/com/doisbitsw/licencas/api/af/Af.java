@@ -17,6 +17,8 @@ public class Af {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Long code;
+    private Long despesa;
+    private Long despesax;
     private Long setor;
     private Long nivel;
     private Long fornecedor;
@@ -24,6 +26,7 @@ public class Af {
     private Boolean isenviado;
     private String createdAt;
     private Boolean isativo;
+    private Boolean isdespesa;
 
     //não esta no banco
     private String nomefor;

@@ -19,6 +19,7 @@ public class Compras {
     private String cod;
     private String pedido;
     private Long escola;
+    private Long setor;
     private Long nivel;
     private Long produto;
     private String alias;

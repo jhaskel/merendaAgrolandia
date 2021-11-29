@@ -7,6 +7,7 @@ import org.modelmapper.ModelMapper;
 public class AfPedidoDTO {
     private Long id;
     private Long af;
+    private Long setor;
     private String pedido;
     private Double total;
     private Long nivel;

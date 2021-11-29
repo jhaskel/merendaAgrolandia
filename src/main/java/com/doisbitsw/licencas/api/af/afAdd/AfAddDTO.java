@@ -12,8 +12,14 @@ public class AfAddDTO {
     private Long fornecedor;
     private String status;
     private Boolean isenviado;
+
     private String createdAt;
     private Boolean isativo;
+    private Long despesa;
+    private Long despesax;
+    private Boolean isdespesa;
+
+
 
     public static AfAddDTO create(AfAdd afAdd) {
         ModelMapper modelMapper = new ModelMapper();

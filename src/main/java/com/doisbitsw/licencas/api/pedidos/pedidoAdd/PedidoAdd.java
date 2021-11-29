@@ -1,4 +1,4 @@
-package com.doisbitsw.licencas.api.af.afAdd;
+package com.doisbitsw.licencas.api.pedidos.pedidoAdd;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,31 +10,19 @@ import javax.persistence.Id;
 
 @NoArgsConstructor
 @Data
-@Entity(name = "af")
-public class AfAdd {
+@Entity(name = "pedido")
+public class PedidoAdd {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long code;
-    private Long setor;
-    private Long nivel;
-    private Long fornecedor;
+    private Long unidade;
+    private Double total;
     private String status;
-    private Boolean isenviado;
+    private Boolean isaf;
     private String createdAt;
+    private String modifiedAt;
     private Boolean isativo;
-    private Long despesa;
-    private Long despesax;
-    private Boolean isdespesa;
-
-
-
-
-
-
-
-
 
 
 
