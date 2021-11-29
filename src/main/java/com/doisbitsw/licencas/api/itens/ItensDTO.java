@@ -8,6 +8,7 @@ public class ItensDTO {
     private Long id;
     private String cod;
     private String pedido;
+    private Long setor;
     private Long escola;
     private Long nivel;
     private Long produto;
