@@ -16,24 +16,15 @@ public class Produto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long categoria;
-    private Long fornecedor;
     private String code;
     private String nome;
     private String alias;
-    private Double quantidade;
-    private Double estoque;
-    private Double valor;
     private String unidade;
+    private Long fornecedor;
     private String image;
-    private Boolean agrofamiliar;
-    private String escolas;
-    private Long ano;
-    private Boolean ativo;
-    private Boolean disponivel;
-    private String created;
-    private String modified;
-    private String processo;
+    private String createdAt;
+    private String modifiedAt;
+
 
 
 

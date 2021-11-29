@@ -6,10 +6,12 @@ import org.modelmapper.ModelMapper;
 @Data
 public class CategoriaDTO {
     private Long id;
+    private Long licitacao;
     private String nome;
-    private String image;
+    private Long icone;
     private Boolean isativo;
     private Boolean isalimento;
+
 
 
     public static CategoriaDTO create(Categoria categoria) {

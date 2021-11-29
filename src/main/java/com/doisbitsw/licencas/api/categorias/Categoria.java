@@ -20,6 +20,9 @@ public class Categoria {
     private String image;
     private Boolean isativo;
     private Boolean isalimento;
+    private Long licitacao;
+    private Long icone;
+
 
 
 
