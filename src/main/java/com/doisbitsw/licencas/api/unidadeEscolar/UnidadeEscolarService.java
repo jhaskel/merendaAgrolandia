@@ -20,6 +20,10 @@ public class UnidadeEscolarService {
         return list;
     }
 
+    public List<UnidadeEscolarDTO> getSetor(Long setor) {
+        return rep.findSetor(setor).stream().map(UnidadeEscolarDTO::create).collect(Collectors.toList());
+    }
+
     public UnidadeEscolarDTO getNivelById(Long id) {
         Optional<UnidadeEscolar> carro = rep.findById(id);
         return carro.map(UnidadeEscolarDTO::create).orElseThrow(() -> new ObjectNotFoundException("Nivel não encontrado"));

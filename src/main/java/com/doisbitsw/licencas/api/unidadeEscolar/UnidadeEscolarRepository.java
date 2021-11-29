@@ -30,6 +30,9 @@ public interface UnidadeEscolarRepository extends JpaRepository<UnidadeEscolar, 
     @Query(value = "select nome from unidade_escolar where id = :id", nativeQuery = true)
     String findNome(Long id);
 
+    @Query(value = "SELECT *  FROM unidades where setor = :setor order by id;", nativeQuery = true)
+    List<UnidadeEscolar> findSetor(Long setor);
+
 
 
 

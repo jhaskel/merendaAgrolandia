@@ -34,6 +34,14 @@ public class UnidadeEscolarController {
                 ResponseEntity.noContent().build() :
                 ResponseEntity.ok(carros);
     }
+
+    @GetMapping("/setor/{setor}")
+    public ResponseEntity getSetor(@PathVariable("setor") Long setor) {
+        List<UnidadeEscolarDTO> escolas = service.getSetor(setor);
+        return escolas.isEmpty() ?
+                ResponseEntity.noContent().build() :
+                ResponseEntity.ok(escolas);
+    }
     @GetMapping("/quantidade")
     public long getQuantidade() {
         return service.getQuantidade();
