@@ -1,4 +1,4 @@
-package com.doisbitsw.licencas.api.nivelEscolar;
+package com.doisbitsw.licencas.api.nivel;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,7 +11,7 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @Data
 @Entity
-public class NivelEscolar {
+public class Nivel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
