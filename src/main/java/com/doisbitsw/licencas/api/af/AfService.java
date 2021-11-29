@@ -44,6 +44,11 @@ public class AfService {
     }
 
 
+    public List<AfDTO> getSetor(Long setor) {
+        return rep.findSetor(setor).stream().map(AfDTO::create).collect(Collectors.toList());
+    }
+
+
     public AfDTO insert(Af af) {
         Assert.isNull(af.getId(),"Não foi possível inserir o registro");
         return AfDTO.create(rep.save(af));

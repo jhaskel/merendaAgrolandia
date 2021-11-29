@@ -22,7 +22,6 @@ public class AfController {
     }
 
 
-
     @GetMapping("/{id}")
     public ResponseEntity get(@PathVariable("id") Long id) {
         AfDTO carro = service.getCarroById(id);
@@ -45,6 +44,7 @@ public class AfController {
                 ResponseEntity.ok(carros);
     }
 
+
     @GetMapping("/af")
     public long getAf() {
         return service.getAf();
@@ -54,6 +54,15 @@ public class AfController {
     @GetMapping("/afEnviada")
     public long getAfEnviada() {
         return service.getAfEnviada();
+    }
+
+    //busca as af por fornecedores
+    @GetMapping("/setor/{setor}")
+    public ResponseEntity getSetor(@PathVariable("setor") Long setor) {
+        List<AfDTO> afs = service.getSetor(setor);
+        return afs.isEmpty() ?
+                ResponseEntity.noContent().build() :
+                ResponseEntity.ok(afs);
     }
 
 

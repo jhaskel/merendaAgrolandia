@@ -1,20 +1,10 @@
-package com.doisbitsw.licencas.api.af;
+package com.doisbitsw.licencas.api.af.afAdd;
 
 import lombok.Data;
-import lombok.NoArgsConstructor;
+import org.modelmapper.ModelMapper;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-@NoArgsConstructor
 @Data
-@Entity
-public class Af {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class AfAddDTO {
     private Long id;
     private Long code;
     private Long fornecedor;
@@ -34,15 +24,8 @@ public class Af {
     private Long setor;
 
 
-
-
-
-
-
-
-
-
-
-
+    public static AfAddDTO create(AfAdd afAdd) {
+        ModelMapper modelMapper = new ModelMapper();
+        return modelMapper.map(afAdd, AfAddDTO.class);
+    }
 }
-

@@ -21,6 +21,7 @@ public class AfDTO {
     private Long despesax;
     private String numero;
     private Boolean isdespesa;
+    private Long setor;
 
     private Long totalAf;
 

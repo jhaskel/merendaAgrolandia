@@ -1,4 +1,4 @@
-package com.doisbitsw.licencas.api.af;
+package com.doisbitsw.licencas.api.af.afAdd;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,8 +10,8 @@ import javax.persistence.Id;
 
 @NoArgsConstructor
 @Data
-@Entity
-public class Af {
+@Entity(name = "af")
+public class AfAdd {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
