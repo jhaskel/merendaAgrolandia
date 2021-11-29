@@ -230,9 +230,10 @@ public interface ItensRepository extends JpaRepository<Itens, Long> {
     double findDiversos(Long ano);
 
     @Query(value = "SELECT sum(ite.total) as tot  FROM itens ite\n" +
-            "INNER JOIN af ON af.code = ite.af\n" +
-            "WHERE af.ativo= true   and ite.ano = :ano AND ite.nivel = :nivel AND ite.af > 0\n" +
-            "AND (ite.categoria = 4 OR ite.categoria = 7)  ", nativeQuery = true)
+            "            INNER JOIN af ON af.code = ite.af\n" +
+            "            INNER JOIN categoria cat ON cat.id = ite.categoria\n" +
+            "            WHERE af.isativo= true   and ite.ano = :ano AND ite.nivel = :nivel AND ite.af > 0\n" +
+            "            AND cat.isalimento = false)  ", nativeQuery = true)
     double findDiversosNivel(Long nivel,Long ano);
 
     @Query(value = "SELECT sum(ite.total) as tot  FROM itens ite\n" +
