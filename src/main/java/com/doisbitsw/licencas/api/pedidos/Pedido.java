@@ -23,9 +23,10 @@ public class Pedido {
     private String createdAt;
     private String modifiedAt;
     private Boolean isativo;
+    private Boolean ischeck;
 
     //não vai pro banco
-    private String nomedaunidade;
+    private String nomedaescola;
     private Long idsetor;
 
 

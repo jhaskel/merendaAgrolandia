@@ -13,6 +13,7 @@ public class PedidoAddDTO {
     private String createdAt;
     private String modifiedAt;
     private Boolean isativo;
+    private Boolean ischeck;
 
 
 

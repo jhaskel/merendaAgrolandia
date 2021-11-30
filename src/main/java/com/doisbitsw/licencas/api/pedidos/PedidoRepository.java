@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface PedidoRepository extends JpaRepository<Pedido, Long> {
 
-    @Query(value = "SELECT ped.*,uni.alias as nomedaunidade,seto.id AS idsetor FROM pedido ped\n" +
+    @Query(value = "SELECT ped.*,uni.alias as nomedaescola,seto.id AS idsetor FROM pedido ped\n" +
             "INNER JOIN unidade_escolar uni ON uni.id = ped.escola\n" +
             "INNER JOIN setor seto ON seto.id = uni.setor\n" +
             "ORDER BY ped.isaf ,ped.id desc", nativeQuery = true)
@@ -14,7 +14,7 @@ public interface PedidoRepository extends JpaRepository<Pedido, Long> {
 
 
 
-    @Query(value = "SELECT ped.*,esc.alias as nomedaunidade,seto.id AS idsetor FROM pedido ped\n" +
+    @Query(value = "SELECT ped.*,esc.alias as nomedaescola,seto.id AS idsetor FROM pedido ped\n" +
             "INNER JOIN unidade_escolar esc ON esc.id = ped.escola\n" +
             "INNER JOIN setor seto ON seto.id = esc.setor\n" +
             " WHERE ped.escola = :escola\n" +

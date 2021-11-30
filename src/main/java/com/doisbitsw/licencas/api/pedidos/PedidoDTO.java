@@ -13,10 +13,11 @@ public class PedidoDTO {
     private String createdAt;
     private String modifiedAt;
     private Boolean isativo;
+    private Boolean ischeck;
 
     private Long totalCart;
     private Long temCart;
-    private String nomedaunidade;
+    private String nomedaescola;
     private Long idsetor;
 
 

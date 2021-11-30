@@ -23,6 +23,7 @@ public class PedidoAdd {
     private String createdAt;
     private String modifiedAt;
     private Boolean isativo;
+    private Boolean ischeck;
 
 
 
