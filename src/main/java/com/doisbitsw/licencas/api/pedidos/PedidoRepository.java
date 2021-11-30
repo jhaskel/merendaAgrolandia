@@ -7,7 +7,7 @@ import java.util.List;
 public interface PedidoRepository extends JpaRepository<Pedido, Long> {
 
     @Query(value = "SELECT ped.*,uni.alias as nomedaunidade,seto.id AS idsetor FROM pedido ped\n" +
-            "INNER JOIN unidades uni ON uni.id = ped.unidade\n" +
+            "INNER JOIN unidade_escolar uni ON uni.id = ped.escola\n" +
             "INNER JOIN setor seto ON seto.id = uni.setor\n" +
             "ORDER BY ped.isaf ,ped.id desc", nativeQuery = true)
     List<Pedido> findAll();
@@ -15,11 +15,11 @@ public interface PedidoRepository extends JpaRepository<Pedido, Long> {
 
 
     @Query(value = "SELECT ped.*,esc.alias as nomedaunidade,seto.id AS idsetor FROM pedido ped\n" +
-            "INNER JOIN unidades esc ON esc.id = ped.unidade\n" +
-            "INNER JOIN setor seto ON seto.id = uni.setor\n" +
-            " WHERE ped.unidade = :unidade\n" +
+            "INNER JOIN unidade_escolar esc ON esc.id = ped.escola\n" +
+            "INNER JOIN setor seto ON seto.id = esc.setor\n" +
+            " WHERE ped.escola = :escola\n" +
             " ORDER BY ped.id desc", nativeQuery = true)
-    List<Pedido> findByUnidade(Long unidade);
+    List<Pedido> findByUnidade(Long escola);
 
 
     @Query(value = "SELECT COUNT(id) AS totalCart FROM pedido where isaf = false", nativeQuery = true)

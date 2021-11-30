@@ -27,8 +27,8 @@ public class PedidoService {
 
 
 
-    public List<PedidoDTO> getPedidoByUnidade(Long unidade) {
-        return rep.findByUnidade(unidade).stream().map(PedidoDTO::create).collect(Collectors.toList());
+    public List<PedidoDTO> getPedidoByUnidade(Long escola) {
+        return rep.findByUnidade(escola).stream().map(PedidoDTO::create).collect(Collectors.toList());
     }
 
 
