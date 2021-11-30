@@ -35,6 +35,13 @@ public class PedidoController {
                 ResponseEntity.noContent().build() :
                 ResponseEntity.ok(pedido);
     }
+    @GetMapping("/check/{ischeck}")
+    public ResponseEntity getCheck(@PathVariable("ischeck") Boolean ischeck) {
+        List<PedidoDTO> pedido = service.getCheck(ischeck);
+        return pedido.isEmpty() ?
+                ResponseEntity.noContent().build() :
+                ResponseEntity.ok(pedido);
+    }
 
 
     @GetMapping("/pedidoSemAf")

@@ -31,6 +31,10 @@ public class PedidoService {
         return rep.findByUnidade(escola).stream().map(PedidoDTO::create).collect(Collectors.toList());
     }
 
+    public List<PedidoDTO> getCheck(Boolean ischeck) {
+        return rep.findCheck(ischeck).stream().map(PedidoDTO::create).collect(Collectors.toList());
+    }
+
 
 
     public long getPedidoSemAf(){
