@@ -37,6 +37,11 @@ public class AfService {
     }
 
 
+    public List<AfDTO> getDespesa(Boolean isdespesa) {
+        return rep.findDespesa(isdespesa).stream().map(AfDTO::create).collect(Collectors.toList());
+    }
+
+
     public List<AfDTO> getSetor(Long setor) {
         return rep.findSetor(setor).stream().map(AfDTO::create).collect(Collectors.toList());
     }
