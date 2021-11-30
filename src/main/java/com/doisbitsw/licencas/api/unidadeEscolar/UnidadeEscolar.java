@@ -23,6 +23,7 @@ public class UnidadeEscolar {
     private String bairro;
     private Long alunos;
     private Boolean isativo;
+    private Boolean isescola;
     private String created;
     private String modified;
 
