@@ -21,7 +21,7 @@ public interface PedidoRepository extends JpaRepository<Pedido, Long> {
             " ORDER BY ped.id desc", nativeQuery = true)
     List<Pedido> findByUnidade(Long escola);
 
-    @Query(value = "SELECT * from  pedido where ischeck =:ischeck order by id desc", nativeQuery = true)
+    @Query(value = "SELECT ped.*,ped.status as nomedaescola,ped.escola as idsetor from  pedido ped where ped.ischeck =:ischeck order by ped.id desc", nativeQuery = true)
     List<Pedido> findCheck(Boolean ischeck);
 
     @Query(value = "SELECT COUNT(id) AS totalCart FROM pedido where isaf = false", nativeQuery = true)
