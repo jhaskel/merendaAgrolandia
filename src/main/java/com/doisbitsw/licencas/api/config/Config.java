@@ -22,7 +22,7 @@ public class Config {
     private String cargo;
     private String email;
     private String celular;
-    private Boolean ativo;
+    private Boolean isativo;
     private String created;
     private String modified;
 
