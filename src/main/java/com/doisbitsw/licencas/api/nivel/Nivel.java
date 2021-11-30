@@ -19,6 +19,7 @@ public class Nivel {
     private Long setor;
     private String nome;
     private Boolean isativo;
+    private Boolean isescola;
     private String created;
     private String modified;
 

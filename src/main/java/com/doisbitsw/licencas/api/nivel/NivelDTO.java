@@ -11,6 +11,7 @@ public class NivelDTO {
     private Boolean isativo;
     private String created;
     private String modified;
+    private Boolean isescola;
 
     public static NivelDTO create(Nivel nivel) {
         ModelMapper modelMapper = new ModelMapper();

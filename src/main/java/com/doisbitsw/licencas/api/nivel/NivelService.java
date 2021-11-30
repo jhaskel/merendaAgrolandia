@@ -52,6 +52,8 @@ public class NivelService {
             Nivel db = optional.get();
             // Copiar as propriedades
             db.setNome(nivel.getNome());
+            db.setIsativo(nivel.getIsativo());
+            db.setIsescola(nivel.getIsescola());
             System.out.println("Nivel id " + db.getId());
             rep.save(db);
             return NivelDTO.create(db);
