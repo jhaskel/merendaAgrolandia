@@ -35,10 +35,11 @@ public class ItensDTO {
     private String obs;
 
     private Double tot;
+    private String nomec;
     private Double totAgro;
     private Double tots;
     private Double totalPedido;
-    private String nomec;
+
 
 
     public static ItensDTO create(Itens itens) {

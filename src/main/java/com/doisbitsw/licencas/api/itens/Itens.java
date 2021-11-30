@@ -47,8 +47,7 @@ public class Itens {
     //nao no banco
     private Double tot;
     private String nomec;
-    private Long local;
-    private String modifiedAt;
+
 
 
 
