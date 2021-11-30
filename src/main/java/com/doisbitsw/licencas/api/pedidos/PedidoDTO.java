@@ -6,23 +6,19 @@ import org.modelmapper.ModelMapper;
 @Data
 public class PedidoDTO {
     private Long id;
-    private String code;
-    private String nomeescola;
-    private Long escola;
-    private Long nivel;
+    private Long unidade;
     private Double total;
-    private Long comprador;
     private String status;
-    private Long semana;
     private Boolean isaf;
-    private String created;
-    private String modified;
-    private Boolean ativo;
-    private Boolean ischeck;
-    private Boolean iscart;
+    private String createdAt;
+    private String modifiedAt;
+    private Boolean isativo;
 
     private Long totalCart;
     private Long temCart;
+    private String nomedaunidade;
+    private Long idsetor;
+
 
 
     public static PedidoDTO create(Pedido pedido) {

@@ -1,6 +1,5 @@
 package com.doisbitsw.licencas.api.pedidos;
 
-import com.doisbitsw.licencas.api.carros.CarroDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,45 +17,23 @@ public class PedidoController {
 
     @GetMapping()
     public ResponseEntity get() {
-        List<PedidoDTO> carros = service.getCarros();
-        return ResponseEntity.ok(carros);
+        List<PedidoDTO> pedido = service.getPedido();
+        return ResponseEntity.ok(pedido);
     }
 
     @GetMapping("/{id}")
     public ResponseEntity get(@PathVariable("id") Long id) {
-        PedidoDTO carro = service.getCarroById(id);
+        PedidoDTO pedido = service.getPedidoById(id);
 
-        return ResponseEntity.ok(carro);
+        return ResponseEntity.ok(pedido);
     }
 
-    @GetMapping("/code/{code}")
-    public ResponseEntity getCarrosByCode(@PathVariable("code") String code) {
-        List<PedidoDTO> carros = service.getCarrosByCode(code);
-        return carros.isEmpty() ?
+    @GetMapping("/unidade/{unidade}")
+    public ResponseEntity getPedidoByUnidade(@PathVariable("unidade") Long unidade) {
+        List<PedidoDTO> pedido = service.getPedidoByUnidade(unidade);
+        return pedido.isEmpty() ?
                 ResponseEntity.noContent().build() :
-                ResponseEntity.ok(carros);
-    }
-
-    @GetMapping("/check/{ischeck}")
-    public ResponseEntity getIsAf(@PathVariable("ischeck") Boolean ischeck) {
-        List<PedidoDTO> carros = service.getIsAF(ischeck);
-        return carros.isEmpty() ?
-                ResponseEntity.noContent().build() :
-                ResponseEntity.ok(carros);
-    }
-
-
-    @GetMapping("/escola/{escola}")
-    public ResponseEntity getCarrosByEscola(@PathVariable("escola") Long escola) {
-        List<PedidoDTO> carros = service.getCarrosByEscola(escola);
-        return carros.isEmpty() ?
-                ResponseEntity.noContent().build() :
-                ResponseEntity.ok(carros);
-    }
-
-    @GetMapping("/cart")
-    public long getCart() {
-        return service.getCart();
+                ResponseEntity.ok(pedido);
     }
 
 
@@ -67,11 +44,8 @@ public class PedidoController {
 
 
     @PostMapping
-
     public ResponseEntity post(@RequestBody Pedido pedido) {
-
         PedidoDTO c = service.insert(pedido);
-
         URI location = getUri(c.getId());
         return ResponseEntity.created(location).body(c);
     }
@@ -81,29 +55,6 @@ public class PedidoController {
                 .buildAndExpand(id).toUri();
     }
 
-    @GetMapping("/ultimoid")
-    public long getUltimoId() {
-        return service.getUltimoId();
-    }
-
-
-    @GetMapping("/temcart/{escola}")
-    public long getTemCart(@PathVariable("escola") Long escola) {
-        return service.getTemCart(escola);
-    }
-
-    @GetMapping("/temcart1/{escola}")
-    public long getTemCart1(@PathVariable("escola") Long escola) {
-        return service.getTemCart1(escola);
-    }
-
-    @GetMapping("/id/{id}")
-    public ResponseEntity getCId(@PathVariable("id") Long id) {
-        List<PedidoDTO> carros = service.getId(id);
-        return carros.isEmpty() ?
-                ResponseEntity.noContent().build() :
-                ResponseEntity.ok(carros);
-    }
 
     @PutMapping("/{id}")
     public ResponseEntity put(@PathVariable("id") Long id, @RequestBody Pedido pedido) {
@@ -117,7 +68,6 @@ public class PedidoController {
     @DeleteMapping("/{id}")
     public ResponseEntity delete(@PathVariable("id") Long id) {
         service.delete(id);
-
         return ResponseEntity.ok().build();
     }
 }
