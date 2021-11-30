@@ -11,10 +11,10 @@ public interface PedidoRepository extends JpaRepository<Pedido, Long> {
     @Query(value = "SELECT * FROM pedido where iscart = false order by id desc", nativeQuery = true)
     List<Pedido> findAll();
 
-    @Query(value = "SELECT *  FROM pedido where code = :code order by id desc;", nativeQuery = true)
+    @Query(value = "SELECT *  FROM pedido where code = :code order by id desc", nativeQuery = true)
     List<Pedido> findByCode(String code);
 
-    @Query(value = "SELECT *  FROM pedido where ischeck = :ischeck order by id desc;", nativeQuery = true)
+    @Query(value = "SELECT *  FROM pedido where ischeck = :ischeck order by id desc", nativeQuery = true)
     List<Pedido> findIsAf(Boolean ischeck);
 
     @Query(value = "SELECT ped.*,esc.alias as nomedaunidade,seto.id AS idsetor \n" +
@@ -25,7 +25,7 @@ public interface PedidoRepository extends JpaRepository<Pedido, Long> {
             "            ORDER BY ped.id desc;", nativeQuery = true)
     List<Pedido> findByEscola(Long escola);
 
-    @Query(value = "SELECT COUNT(id) AS totalCart FROM pedido WHERE ischeck = false AND iscart =0", nativeQuery = true)
+    @Query(value = "SELECT COUNT(id) AS totalCart FROM pedido WHERE ischeck = false AND iscart =false", nativeQuery = true)
     long findCart();
 
     @Query(value = "SELECT id FROM pedido order by id desc limit 1", nativeQuery = true)
