@@ -16,14 +16,10 @@ public class Produto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String code;
     private String nome;
     private String alias;
     private String unidade;
-    private Long fornecedor;
-    private String image;
-    private String createdAt;
-    private String modifiedAt;
+
 
 
 

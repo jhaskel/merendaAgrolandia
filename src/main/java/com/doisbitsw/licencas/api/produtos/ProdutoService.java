@@ -42,14 +42,12 @@ public class ProdutoService {
         if(optional.isPresent()) {
             Produto db = optional.get();
             // Copiar as propriedades
-            db.setCode(produto.getCode());
+
             db.setNome(produto.getNome());
             db.setAlias(produto.getAlias());
             db.setUnidade(produto.getUnidade());
 
-            db.setFornecedor(produto.getFornecedor());
-            db.setImage(produto.getImage());
-            db.setModifiedAt(produto.getModifiedAt());
+
 
             System.out.println("Produto id " + db.getId());
 

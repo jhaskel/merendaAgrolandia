@@ -6,14 +6,10 @@ import org.modelmapper.ModelMapper;
 @Data
 public class ProdutoDTO {
     private Long id;
-    private String code;
     private String nome;
     private String alias;
     private String unidade;
-    private Long fornecedor;
-    private String image;
-    private String createdAt;
-    private String modifiedAt;
+
 
     public static ProdutoDTO create(Produto produto) {
         ModelMapper modelMapper = new ModelMapper();
