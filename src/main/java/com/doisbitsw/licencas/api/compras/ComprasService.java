@@ -240,7 +240,7 @@ public class ComprasService {
             db.setIscheck(compras.getIscheck());
             db.setCod(compras.getCod());
             db.setMes(compras.getMes());
-            db.setAtivo(compras.getAtivo());
+            db.setIsativo(compras.getIsativo());
 
             System.out.println("Carro id " + db.getId());
 

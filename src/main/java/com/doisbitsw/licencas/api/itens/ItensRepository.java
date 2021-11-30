@@ -24,14 +24,14 @@ public interface ItensRepository extends JpaRepository<Itens, Long> {
     @Query(value = "SELECT ite.*,sum(ite.total) AS tot,ite.cod AS nomec FROM itens ite\n" +
             "\n" +
             " WHERE ite.pedido = :pedido\n" +
-            " AND ite.ativo = true  \n" +
+            " AND ite.isativo = true  \n" +
             " GROUP BY ite.id\n" +
             " ORDER BY ite.fornecedor, ite.alias  ", nativeQuery = true)
     List<Itens> findByPedidoAll(String pedido);
 
     @Query(value = "SELECT ite.*,sum(ite.total) AS tot,ite.cod AS nomec FROM itens ite\n" +
             " WHERE ite.af = :af\n" +
-            " AND ite.ativo = true  \n" +
+            " AND ite.isativo = true  \n" +
             " GROUP BY ite.id\n" +
             " ORDER BY ite.fornecedor, ite.alias ", nativeQuery = true)
     List<Itens> findByAf(Long af);
@@ -242,13 +242,13 @@ public interface ItensRepository extends JpaRepository<Itens, Long> {
             "AND (ite.categoria = 4 OR ite.categoria = 7)  ", nativeQuery = true)
     double findDiversosEscola(Long escola,Long ano);
 
-    @Query(value = "SELECT count(ite.id) as tot FROM itens ite INNER JOIN pedido ped ON ped.code = ite.pedido WHERE  ite.ativo = true AND ped.ativo=true AND ite.escola=:escola AND ped.iscart = true", nativeQuery = true)
+    @Query(value = "SELECT count(ite.id) as tot FROM itens ite INNER JOIN pedido ped ON ped.code = ite.pedido WHERE  ite.isativo = true AND ped.isativo=true AND ite.escola=:escola AND ped.iscart = true", nativeQuery = true)
     long findCart(Long escola);
 
     @Query(value = " SELECT sum(ite.quantidade) as tot from itens ite\n" +
             "            INNER JOIN pedido ped ON ped.id = ite.pedido\n" +
             "            INNER JOIN produto pro ON pro.id = ite.produto\n" +
-            "            WHERE  ped.ativo = TRUE AND ite.produto  = :id", nativeQuery = true)
+            "            WHERE  ped.isativo = TRUE AND ite.produto  = :id", nativeQuery = true)
     long findEstoque(Long id);
 
     @Query(value = "SELECT sum(ite.total) as tot FROM itens ite INNER JOIN af ON af.code = ite.af\n" +

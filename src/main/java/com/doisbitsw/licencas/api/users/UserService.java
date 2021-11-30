@@ -40,7 +40,7 @@ public class UserService {
         if(optional.isPresent()) {
             User db = optional.get();
             // Copiar as propriedades
-            db.setAtivo(user.getAtivo());
+            db.setIsativo(user.getIsativo());
             db.setNome(user.getNome());
             db.setEmail(user.getEmail());
 

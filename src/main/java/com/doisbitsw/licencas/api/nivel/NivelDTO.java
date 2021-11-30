@@ -8,7 +8,7 @@ public class NivelDTO {
     private Long id;
     private Long setor;
     private String nome;
-    private Boolean ativo;
+    private Boolean isativo;
     private String created;
     private String modified;
 

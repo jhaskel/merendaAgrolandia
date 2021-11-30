@@ -10,7 +10,7 @@ public class FornecedorDTO {
     private String alias;
     private String cnpj;
     private String email;
-    private Boolean ativo;
+    private Boolean isativo;
 
     public static FornecedorDTO create(Fornecedor fornecedor) {
         ModelMapper modelMapper = new ModelMapper();

@@ -23,7 +23,7 @@ public class User implements UserDetails {
     private String nivel;
     private String recuperar;
     private String role;
-    private Boolean ativo;
+    private Boolean isativo;
     private String created;
     private String modified;
     private Long setor;

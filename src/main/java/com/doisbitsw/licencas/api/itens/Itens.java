@@ -40,9 +40,8 @@ public class Itens {
     private Boolean isagro;
     private String status;
     private String mes;
-    private Boolean ativo;
+    private Boolean isativo;
     private String processo;
-
     private Double tot;
     private String nomec;
 
@@ -50,7 +49,6 @@ public class Itens {
     private Long local;
 
     private String modifiedAt;
-    private Boolean isativo;
 
 
 

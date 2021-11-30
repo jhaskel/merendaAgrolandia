@@ -40,7 +40,7 @@ public class Compras {
     private Boolean isagro;
     private String status;
     private String mes;
-    private Boolean ativo;
+    private Boolean isativo;
     private Long licitacao;
     private String processo;
 

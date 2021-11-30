@@ -14,7 +14,7 @@ public class UsuarioDTO {
     private String nivel;
     private String recuperar;
     private String role;
-    private Boolean ativo;
+    private Boolean isativo;
     private String created;
     private String modified;
 

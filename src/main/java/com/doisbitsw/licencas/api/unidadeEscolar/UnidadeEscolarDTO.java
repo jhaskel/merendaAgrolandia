@@ -13,7 +13,7 @@ public class UnidadeEscolarDTO {
     private String endereco;
     private String bairro;
     private Long alunos;
-    private Boolean ativo;
+    private Boolean isativo;
     private String created;
     private String modified;
 

@@ -268,7 +268,7 @@ public class ItensService {
             db.setIscheck(itens.getIscheck());
             db.setCod(itens.getCod());
             db.setMes(itens.getMes());
-            db.setAtivo(itens.getAtivo());
+            db.setIsativo(itens.getIsativo());
 
             System.out.println("Carro id " + db.getId());
 

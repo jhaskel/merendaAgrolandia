@@ -30,7 +30,7 @@ public class ItensDTO {
     private Boolean isagro;
     private String status;
     private String mes;
-    private Boolean ativo;
+    private Boolean isativo;
     private String processo;
 
     private Double tot;

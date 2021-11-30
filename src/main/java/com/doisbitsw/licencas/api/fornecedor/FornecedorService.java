@@ -48,7 +48,7 @@ public class FornecedorService {
             db.setCnpj(fornecedor.getCnpj());
             db.setAlias(fornecedor.getAlias());
             db.setEmail(fornecedor.getEmail());
-            db.setAtivo(fornecedor.getAtivo());
+            db.setIsativo(fornecedor.getIsativo());
             System.out.println("Carro id " + db.getId());
 
             // Atualiza o carro
