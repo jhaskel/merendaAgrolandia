@@ -14,7 +14,7 @@ public interface EstoqueRepository extends JpaRepository<Estoque, Long> {
             "INNER JOIN categoria cat ON cat.id = est.categoria\n" +
             "INNER JOIN licitacao sub ON sub.id = est.licitacao\n" +
             "INNER JOIN fornecedor forn ON forn.id = est.fornecedor\n" +
-            "where sub.isativo = true and cat.isativo = TRUE AND forn.isativo=true\n" +
+            "where sub.isativo = true and cat.isativo = TRUE AND forn.ativo=true\n" +
             "GROUP BY est.produto\n" +
             "ORDER BY est.isativo DESC,est.categoria,est.alias", nativeQuery = true)
     List<Estoque> findAll();
@@ -23,7 +23,7 @@ public interface EstoqueRepository extends JpaRepository<Estoque, Long> {
     @Query(value = "SELECT * FROM estoque p \n" +
             "INNER JOIN categoria cat ON cat.id = p.categoria \n" +
             "WHERE p.isativo = TRUE AND cat.isativo = true and p.id NOT IN (SELECT produto FROM itens ite\n" +
-            "INNER JOIN pedido ped ON ped.id = ite.pedido WHERE ite.local = :local AND ped.isaf = TRUE) \n" +
+            "INNER JOIN pedido ped ON ped.id = ite.pedido WHERE ite.escola = :local AND ped.isaf = TRUE) \n" +
             "ORDER BY p.isativo,p.categoria,p.agrofamiliar,p.alias ", nativeQuery = true)
     List<Estoque> findByEcola(Long local);
 
@@ -41,7 +41,7 @@ public interface EstoqueRepository extends JpaRepository<Estoque, Long> {
 
 
     @Query(value = "SELECT * FROM estoque p\n" +
-            "WHERE p.isativo = true and p.id NOT IN (SELECT produto FROM itens ) ORDER BY p.categoria,p.nome", nativeQuery = true)
+            "WHERE p.isativo = true and p.id NOT IN (SELECT produto FROM itens ) ORDER BY p.categoria,p.alias", nativeQuery = true)
     List<Estoque> findMenos();
 
 

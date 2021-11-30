@@ -47,6 +47,12 @@ public class Itens {
     private String nomec;
 
 
+    private Long local;
+
+    private String modifiedAt;
+    private Boolean isativo;
+
+
 
 }
 
