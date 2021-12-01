@@ -112,6 +112,10 @@ public class ItensService {
         return rep.findTotalCategoriaEscola(escola,ano).stream().map(ItensDTO::create).collect(Collectors.toList());
     }
 
+    public double getFamiliarEscola(Long escola,Long ano){
+        return rep.findFamiliarEscola(escola,ano);
+    }
+
     public List<ItensDTO> getTotalEscolas(Long ano) {
         return rep.findTotalEscolas(ano).stream().map(ItensDTO::create).collect(Collectors.toList());
     }

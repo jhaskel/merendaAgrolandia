@@ -310,6 +310,11 @@ public class ItensController {
         return service.getFamiliar(ano);
     }
 
+    @GetMapping("/familiarEscola/{escola}/{ano}")
+    public double getFamiliar(@PathVariable("escola") Long escola,@PathVariable("ano") Long ano) {
+        return service.getFamiliarEscola(escola,ano);
+    }
+
 
     @PostMapping
     public ResponseEntity post(@RequestBody Itens pedidoItens) {
