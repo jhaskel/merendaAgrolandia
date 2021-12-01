@@ -233,6 +233,11 @@ public class ItensService {
         return rep.findProduto(produto).stream().map(ItensDTO::create).collect(Collectors.toList());
     }
 
+    //verificado
+    public List<ItensDTO> getEstoques(Long produto,Long licitacao) {
+        return rep.findEstoques(produto,licitacao).stream().map(ItensDTO::create).collect(Collectors.toList());
+    }
+
 
 
 

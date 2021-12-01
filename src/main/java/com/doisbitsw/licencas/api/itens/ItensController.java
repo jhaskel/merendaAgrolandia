@@ -212,6 +212,15 @@ public class ItensController {
                 ResponseEntity.ok(itens);
     }
 
+    //verificado
+    @GetMapping("/estoques/{produto}/{licitacao}")
+    public ResponseEntity getEstoques(@PathVariable("produto") Long produto,@PathVariable("licitacao") Long licitacao) {
+        List<ItensDTO> itens = service.getEstoques(produto,licitacao);
+        return itens.isEmpty() ?
+                ResponseEntity.noContent().build() :
+                ResponseEntity.ok(itens);
+    }
+
 
     @GetMapping("/total/{ano}")
     public double getTotal(@PathVariable("ano") Long ano) {
