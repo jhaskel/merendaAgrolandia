@@ -15,8 +15,14 @@ public class AlmoxarifadoService {
     @Autowired
 
     private AlmoxarifadoRepository rep;
+
     public List<AlmoxarifadoDTO> getCarros(Long licitacao) {
         List<AlmoxarifadoDTO> list = rep.findLicitacao(licitacao).stream().map(AlmoxarifadoDTO::create).collect(Collectors.toList());
+        return list;
+    }
+
+    public List<AlmoxarifadoDTO> getEscola(Long escola) {
+        List<AlmoxarifadoDTO> list = rep.findEscola(escola).stream().map(AlmoxarifadoDTO::create).collect(Collectors.toList());
         return list;
     }
 

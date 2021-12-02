@@ -21,6 +21,12 @@ public class AlmoxarifadoController {
         return ResponseEntity.ok(carros);
     }
 
+    @GetMapping("escola/{escola}")
+    public ResponseEntity getEscola(@PathVariable("escola") Long escola) {
+        List<AlmoxarifadoDTO> carros = service.getEscola(escola);
+        return ResponseEntity.ok(carros);
+    }
+
 
     @GetMapping("/{id}")
     public ResponseEntity get(@PathVariable("id") Long id) {
