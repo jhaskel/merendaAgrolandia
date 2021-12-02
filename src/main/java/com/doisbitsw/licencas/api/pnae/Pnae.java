@@ -17,6 +17,7 @@ public class Pnae {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Double valor;
+    private String nivel;
     private String created;
     private Long ano;
     private Long cidade;

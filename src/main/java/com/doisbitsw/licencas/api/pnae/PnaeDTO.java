@@ -10,6 +10,7 @@ public class PnaeDTO {
     private String created;
     private Long ano;
     private Long cidade;
+    private String nivel;
     //
     private Double soma;
 
