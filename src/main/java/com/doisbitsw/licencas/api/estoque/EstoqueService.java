@@ -68,12 +68,10 @@ public class EstoqueService {
             db.setUnidade(estoque.getUnidade());
             db.setCategoria(estoque.getCategoria());
             db.setFornecedor(estoque.getFornecedor());
-            db.setImage(estoque.getImage());
             db.setQuantidade(estoque.getQuantidade());
             db.setAgrofamiliar(estoque.getAgrofamiliar());
             db.setAno(estoque.getAno());
             db.setModifiedAt(estoque.getModifiedAt());
-
             db.setIsativo(estoque.getIsativo());
             db.setValor(estoque.getValor());
 
