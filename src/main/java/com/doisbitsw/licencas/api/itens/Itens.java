@@ -19,7 +19,7 @@ public class Itens {
     private Long setor;
     private Long escola;
     private Long produto;
-    private String cod;
+    private Long cod;
     private String alias;
     private Long categoria;
     private Long fornecedor;

@@ -8,7 +8,7 @@ public class EstoqueDTO {
     private Long id;
     private Long produto;
     private Long setor;
-    private String code;
+    private Long code;
     private String alias;
     private Double quantidade;
     private String unidade;
