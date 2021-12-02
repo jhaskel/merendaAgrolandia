@@ -22,7 +22,7 @@ public class Cart {
     private Long licitacao;
     private Long fornecedor;
     private String unidade;
-    private String cod;
+    private Long cod;
     private String alias;
     private Double quantidade;
     private Double valor;

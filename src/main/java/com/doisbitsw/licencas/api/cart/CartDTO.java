@@ -12,7 +12,7 @@ public class CartDTO {
     private Long categoria;
     private Long licitacao;
     private String unidade;
-    private String cod;
+    private Long cod;
     private String alias;
     private Double quantidade;
     private Double valor;
