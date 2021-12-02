@@ -15,8 +15,8 @@ public class AlmoxarifadoService {
     @Autowired
 
     private AlmoxarifadoRepository rep;
-    public List<AlmoxarifadoDTO> getCarros() {
-        List<AlmoxarifadoDTO> list = rep.findAll().stream().map(AlmoxarifadoDTO::create).collect(Collectors.toList());
+    public List<AlmoxarifadoDTO> getCarros(Long licitacao) {
+        List<AlmoxarifadoDTO> list = rep.findLicitacao(licitacao).stream().map(AlmoxarifadoDTO::create).collect(Collectors.toList());
         return list;
     }
 
@@ -50,6 +50,7 @@ public class AlmoxarifadoService {
             db.setUnidade(almoxarifado.getUnidade());
             db.setQuantidade(almoxarifado.getQuantidade());
             db.setIsativo(almoxarifado.getIsativo());
+            db.setLicitacao(almoxarifado.getLicitacao());
 
             System.out.println("Carro id " + db.getId());
 

@@ -9,6 +9,7 @@ public class AlmoxarifadoDTO {
     private Long id;
     private Long escola;
     private Long produto;
+    private Long licitacao;
     private String alias;
     private Long categoria;
     private String unidade;

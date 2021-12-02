@@ -15,9 +15,9 @@ public class AlmoxarifadoController {
     private AlmoxarifadoService service;
 
 
-    @GetMapping()
-    public ResponseEntity get() {
-        List<AlmoxarifadoDTO> carros = service.getCarros();
+    @GetMapping("licitacao/{licitacao}")
+    public ResponseEntity getLicitacao(@PathVariable("licitacao") Long licitacao) {
+        List<AlmoxarifadoDTO> carros = service.getCarros(licitacao);
         return ResponseEntity.ok(carros);
     }
 
