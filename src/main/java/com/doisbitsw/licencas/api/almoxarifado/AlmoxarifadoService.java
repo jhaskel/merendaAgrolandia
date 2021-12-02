@@ -21,6 +21,13 @@ public class AlmoxarifadoService {
     }
 
 
+
+    public AlmoxarifadoDTO getCarroById(Long id) {
+        Optional<Almoxarifado> carro = rep.findById(id);
+        return carro.map(AlmoxarifadoDTO::create).orElseThrow(() -> new ObjectNotFoundException("Carro não encontrado"));
+    }
+
+
     public AlmoxarifadoDTO insert(Almoxarifado pedidoAlmoxarifado) {
         Assert.isNull(pedidoAlmoxarifado.getId(),"Não foi possível inserir o registro");
         return AlmoxarifadoDTO.create(rep.save(pedidoAlmoxarifado));
