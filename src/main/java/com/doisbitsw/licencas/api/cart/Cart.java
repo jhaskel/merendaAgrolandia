@@ -29,8 +29,8 @@ public class Cart {
     private Double total;
     private String createdAt;
     private Boolean isagro;
-    private Long nomeescola;
-    private Long nomefornecedor;
+    private String nomeescola;
+    private String nomefornecedor;
 
 }
 
