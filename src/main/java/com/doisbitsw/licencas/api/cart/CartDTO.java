@@ -18,6 +18,7 @@ public class CartDTO {
     private Double valor;
     private Double total;
     private String createdAt;
+    private Boolean isagro;
 
     public static CartDTO create(Cart cart) {
         ModelMapper modelMapper = new ModelMapper();

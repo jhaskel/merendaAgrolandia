@@ -28,6 +28,7 @@ public class Cart {
     private Double valor;
     private Double total;
     private String createdAt;
+    private Boolean isagro;
 
 }
 
