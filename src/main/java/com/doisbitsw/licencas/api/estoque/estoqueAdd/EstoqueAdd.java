@@ -31,8 +31,6 @@ public class EstoqueAdd {
     private String createdAt;
     private Boolean isativo;
     private String modifiedAt;
-    private String processo;
-    private String nomefornecedor;
 
 
 
