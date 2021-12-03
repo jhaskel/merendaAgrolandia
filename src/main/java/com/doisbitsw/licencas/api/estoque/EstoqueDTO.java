@@ -22,7 +22,6 @@ public class EstoqueDTO {
     private Boolean isativo;
     private String modifiedAt;
     private String processo;
-
     //join
     private Double comprado;
     private String nomecategoria;
