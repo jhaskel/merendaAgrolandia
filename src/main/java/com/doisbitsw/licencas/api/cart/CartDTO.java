@@ -11,6 +11,8 @@ public class CartDTO {
     private Long fornecedor;
     private Long categoria;
     private Long licitacao;
+    private Long nomeescola;
+    private Long nomefornecedor;
     private String unidade;
     private Long cod;
     private String alias;
