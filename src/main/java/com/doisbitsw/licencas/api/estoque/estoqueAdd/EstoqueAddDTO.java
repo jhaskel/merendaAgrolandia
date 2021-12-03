@@ -22,6 +22,7 @@ public class EstoqueAddDTO {
     private Boolean isativo;
     private String modifiedAt;
     private String processo;
+    private String nomefornecedor;
 
 
 

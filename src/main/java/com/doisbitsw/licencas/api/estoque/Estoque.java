@@ -32,6 +32,7 @@ public class Estoque {
     private Boolean isativo;
     private String modifiedAt;
     private String processo;
+    private String nomefornecedor;
 
     //join
     private Double comprado;
