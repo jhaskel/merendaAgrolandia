@@ -42,6 +42,7 @@ public class EstoqueAddService {
             db.setModifiedAt(estoqueAdd.getModifiedAt());
             db.setIsativo(estoqueAdd.getIsativo());
             db.setValor(estoqueAdd.getValor());
+            db.setNomefornecedor(estoqueAdd.getNomefornecedor());
 
             System.out.println("Produto id " + db.getId());
 
