@@ -26,7 +26,6 @@ public class ItensDTO {
     private Double valor;
     private Double total;
     private Boolean ischeck;
-    private Boolean isautorizado;
     private Boolean isagro;
     private String status;
     private String mes;

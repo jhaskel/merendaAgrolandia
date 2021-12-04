@@ -26,7 +26,6 @@ public class ComprasDTO {
     private Long categoria;
     private Long fornecedor;
     private Boolean ischeck;
-    private Boolean isautorizado;
     private Boolean isagro;
     private String status;
     private String mes;

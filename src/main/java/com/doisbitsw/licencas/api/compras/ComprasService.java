@@ -236,7 +236,7 @@ public class ComprasService {
             db.setValor(compras.getValor());
             db.setTotal(compras.getTotal());
             db.setIsagro(compras.getIsagro());
-            db.setIsautorizado(compras.getIsautorizado());
+
             db.setIscheck(compras.getIscheck());
             db.setCod(compras.getCod());
             db.setMes(compras.getMes());

@@ -273,7 +273,6 @@ public class ItensService {
             db.setValor(itens.getValor());
             db.setTotal(itens.getTotal());
             db.setIsagro(itens.getIsagro());
-            db.setIsautorizado(itens.getIsautorizado());
             db.setIscheck(itens.getIscheck());
             db.setCod(itens.getCod());
             db.setMes(itens.getMes());
