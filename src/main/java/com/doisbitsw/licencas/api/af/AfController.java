@@ -60,7 +60,7 @@ public class AfController {
     }
 
     //busca as af por fornecedores
-    @GetMapping("/id/{id}")
+    @GetMapping("/code/{code}")
     public ResponseEntity getId(@PathVariable("code") Long code) {
         List<AfDTO> afs = service.getId(code);
         return afs.isEmpty() ?
