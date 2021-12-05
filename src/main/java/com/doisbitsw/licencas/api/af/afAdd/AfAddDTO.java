@@ -12,7 +12,7 @@ public class AfAddDTO {
     private Long fornecedor;
     private String status;
     private Boolean isenviado;
-
+    private String processo;
     private String createdAt;
     private Boolean isativo;
     private Long despesa;

@@ -43,9 +43,19 @@ public class AfAddService {
             AfAdd db = optional.get();
             // Copiar as propriedades
             db.setCode(afAdd.getCode());
+            db.setProcesso(afAdd.getProcesso());
             db.setFornecedor(afAdd.getFornecedor());
-
             db.setStatus(afAdd.getStatus());
+
+            db.setIsenviado(afAdd.getIsenviado());
+            db.setCreatedAt(afAdd.getCreatedAt());
+            db.setIsativo(afAdd.getIsativo());
+            db.setDespesa(afAdd.getDespesa());
+            db.setDespesax(afAdd.getDespesax());
+            db.setIsdespesa(afAdd.getIsdespesa());
+
+
+
 
 
             System.out.println("Af id " + db.getId());

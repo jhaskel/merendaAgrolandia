@@ -27,6 +27,7 @@ public class Af {
     private String createdAt;
     private Boolean isativo;
     private Boolean isdespesa;
+    private String processo;
 
     //não esta no banco
     private String nomefor;

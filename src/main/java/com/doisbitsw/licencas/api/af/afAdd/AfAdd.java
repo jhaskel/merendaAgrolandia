@@ -23,6 +23,7 @@ public class AfAdd {
     private String status;
     private Boolean isenviado;
     private String createdAt;
+    private String processo;
     private Boolean isativo;
     private Long despesa;
     private Long despesax;

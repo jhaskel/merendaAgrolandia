@@ -17,6 +17,7 @@ public class AfDTO {
     private Long despesa;
     private Long despesax;
     private Boolean isdespesa;
+    private String processo;
 
     //não esta no banco
     private String nomefor;
