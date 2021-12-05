@@ -44,6 +44,7 @@ public class PedidoAddService {
             db.setStatus(pedido.getStatus());
             db.setIsaf(pedido.getIsaf());
             db.setTotal(pedido.getTotal());
+            db.setIscheck(pedido.getIscheck());
             System.out.println("Pedido id " + db.getId());
 
             // Atualiza o pedido
