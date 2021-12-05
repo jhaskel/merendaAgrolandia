@@ -46,6 +46,11 @@ public class AfService {
         return rep.findSetor(setor).stream().map(AfDTO::create).collect(Collectors.toList());
     }
 
+    public List<AfDTO> getId(Long code) {
+        return rep.findId(code).stream().map(AfDTO::create).collect(Collectors.toList());
+    }
+
+
 
     public List<AfDTO> getByFornecedorTest(Long fornecedor) {
         return rep.findByFornecedorTest(fornecedor).stream().map(AfDTO::create).collect(Collectors.toList());

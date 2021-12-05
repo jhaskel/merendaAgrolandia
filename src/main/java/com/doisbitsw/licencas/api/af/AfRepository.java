@@ -33,6 +33,13 @@ public interface AfRepository extends JpaRepository<Af, Long> {
             "GROUP BY af.code order by af.isenviado, af.id desc", nativeQuery = true)
     List<Af> findSetor(Long setor);
 
+    @Query(value = "SELECT af.*,SUM(ite.total) as tot,forn.alias as nomefor FROM af \n" +
+            "INNER JOIN itens ite ON ite.af = af.code\n" +
+            "INNER JOIN fornecedor forn ON forn.id = ite.fornecedor\n" +
+            "WHERE af.code = :id\n" +
+            "GROUP BY af.code order by af.isenviado, af.id desc", nativeQuery = true)
+    List<Af> findId(Long id);
+
     //somente para testes
     @Query(value = "SELECT * FROM af WHERE fornecedor = :fornecedor", nativeQuery = true)
     List<Af> findByFornecedorTest(Long fornecedor);

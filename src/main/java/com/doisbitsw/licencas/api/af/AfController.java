@@ -59,6 +59,15 @@ public class AfController {
                 ResponseEntity.ok(afs);
     }
 
+    //busca as af por fornecedores
+    @GetMapping("/id/{id}")
+    public ResponseEntity getId(@PathVariable("code") Long code) {
+        List<AfDTO> afs = service.getId(code);
+        return afs.isEmpty() ?
+                ResponseEntity.noContent().build() :
+                ResponseEntity.ok(afs);
+    }
+
 
 
 
