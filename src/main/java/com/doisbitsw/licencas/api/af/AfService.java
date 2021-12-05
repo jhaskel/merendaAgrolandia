@@ -73,6 +73,14 @@ public class AfService {
             db.setIsenviado(af.getIsenviado());
             db.setStatus(af.getStatus());
             db.setIsativo(af.getIsativo());
+            db.setIsdespesa(af.getIsdespesa());
+            db.setDespesa(af.getDespesa());
+            db.setDespesax(af.getDespesax());
+            db.setSetor(af.getSetor());
+            db.setNivel(af.getNivel());
+            db.setCreatedAt(af.getCreatedAt());
+            db.setNivel(af.getNivel());
+
 
             System.out.println("Af id " + db.getId());
 
