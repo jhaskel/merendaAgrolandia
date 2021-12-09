@@ -23,7 +23,5 @@ public class Pnae {
     private Long cidade;
 
 
-
-
 }
 
