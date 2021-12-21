@@ -15,18 +15,18 @@ public class PnaeController {
     private PnaeService service;
 
 
-    @GetMapping()
-    public ResponseEntity get() {
-        List<PnaeDTO> carros = service.getCarros();
+    @GetMapping("/{ano")
+    public ResponseEntity get(@PathVariable("ano") Long ano) {
+        List<PnaeDTO> carros = service.getCarros(ano);
         return ResponseEntity.ok(carros);
     }
 
-    @GetMapping("/{id}")
+   /* @GetMapping("/{id}")
     public ResponseEntity get(@PathVariable("id") Long id) {
         PnaeDTO carro = service.getCarroById(id);
 
         return ResponseEntity.ok(carro);
-    }
+    }*/
 
     @GetMapping("/soma/{ano}")
     public double getRep(@PathVariable("ano") Long ano) {

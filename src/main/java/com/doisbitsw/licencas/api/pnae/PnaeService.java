@@ -15,8 +15,8 @@ public class PnaeService {
     @Autowired
 
     private PnaeRepository rep;
-    public List<PnaeDTO> getCarros() {
-        List<PnaeDTO> list = rep.findAll().stream().map(PnaeDTO::create).collect(Collectors.toList());
+    public List<PnaeDTO> getCarros(Long ano) {
+        List<PnaeDTO> list = rep.findAll(ano).stream().map(PnaeDTO::create).collect(Collectors.toList());
         return list;
     }
 
