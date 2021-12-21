@@ -1,6 +1,7 @@
 package com.doisbitsw.licencas.api.pnae;
 
 import com.doisbitsw.licencas.api.infra.exception.ObjectNotFoundException;
+import com.doisbitsw.licencas.api.nivel.NivelDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
@@ -15,8 +16,8 @@ public class PnaeService {
     @Autowired
 
     private PnaeRepository rep;
-    public List<PnaeDTO> getCarros(Long ano) {
-        List<PnaeDTO> list = rep.findAll(ano).stream().map(PnaeDTO::create).collect(Collectors.toList());
+    public List<PnaeDTO> getCarros() {
+        List<PnaeDTO> list = rep.findAll().stream().map(PnaeDTO::create).collect(Collectors.toList());
         return list;
     }
 
@@ -29,6 +30,11 @@ public class PnaeService {
     public double getSoma(Long ano){
         return rep.findSoma(ano);
     }
+
+    public List<PnaeDTO> getAno(Long ano) {
+        return rep.findAno(ano).stream().map(PnaeDTO::create).collect(Collectors.toList());
+    }
+
 
 
 

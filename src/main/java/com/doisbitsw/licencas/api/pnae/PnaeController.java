@@ -1,5 +1,6 @@
 package com.doisbitsw.licencas.api.pnae;
 
+import com.doisbitsw.licencas.api.nivel.NivelDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,23 +16,32 @@ public class PnaeController {
     private PnaeService service;
 
 
-    @GetMapping("/{ano")
-    public ResponseEntity get(@PathVariable("ano") Long ano) {
-        List<PnaeDTO> carros = service.getCarros(ano);
+    @GetMapping()
+    public ResponseEntity get() {
+        List<PnaeDTO> carros = service.getCarros();
         return ResponseEntity.ok(carros);
     }
 
-   /* @GetMapping("/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity get(@PathVariable("id") Long id) {
         PnaeDTO carro = service.getCarroById(id);
 
         return ResponseEntity.ok(carro);
-    }*/
+    }
 
     @GetMapping("/soma/{ano}")
     public double getRep(@PathVariable("ano") Long ano) {
         return service.getSoma(ano);
     }
+
+    @GetMapping("/ano/{ano}")
+    public ResponseEntity getAno(@PathVariable("ano") Long ano) {
+        List<PnaeDTO> itens = service.getAno(ano);
+        return itens.isEmpty() ?
+                ResponseEntity.noContent().build() :
+                ResponseEntity.ok(itens);
+    }
+
 
 
     @PostMapping
