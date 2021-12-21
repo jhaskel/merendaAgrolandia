@@ -26,16 +26,13 @@ public class PnaeService {
         return carro.map(PnaeDTO::create).orElseThrow(() -> new ObjectNotFoundException("Carro não encontrado"));
     }
 
-
-    public double getSoma(Long ano){
+    /*public double getSoma(Long ano){
         return rep.findSoma(ano);
-    }
+    }*/
 
     public List<PnaeDTO> getAno(Long ano) {
         return rep.findAno(ano).stream().map(PnaeDTO::create).collect(Collectors.toList());
     }
-
-
 
 
     public PnaeDTO insert(Pnae pnae) {

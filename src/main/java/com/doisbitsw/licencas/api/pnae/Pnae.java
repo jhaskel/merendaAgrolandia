@@ -22,9 +22,6 @@ public class Pnae {
     private Long ano;
     private Long cidade;
 
-    private Double soma;
-
-
 
 
 }

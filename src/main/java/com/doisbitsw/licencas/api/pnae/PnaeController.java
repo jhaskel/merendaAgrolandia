@@ -25,14 +25,13 @@ public class PnaeController {
     @GetMapping("/{id}")
     public ResponseEntity get(@PathVariable("id") Long id) {
         PnaeDTO carro = service.getCarroById(id);
-
         return ResponseEntity.ok(carro);
     }
 
-    @GetMapping("/soma/{ano}")
+  /*  @GetMapping("/soma/{ano}")
     public double getRep(@PathVariable("ano") Long ano) {
         return service.getSoma(ano);
-    }
+    }*/
 
     @GetMapping("/ano/{ano}")
     public ResponseEntity getAno(@PathVariable("ano") Long ano) {
@@ -41,7 +40,6 @@ public class PnaeController {
                 ResponseEntity.noContent().build() :
                 ResponseEntity.ok(itens);
     }
-
 
 
     @PostMapping

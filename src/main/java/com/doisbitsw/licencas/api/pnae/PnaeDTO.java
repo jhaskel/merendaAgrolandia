@@ -12,7 +12,7 @@ public class PnaeDTO {
     private Long cidade;
     private String nivel;
     //
-    private Double soma;
+ //   private Double soma;
 
     public static PnaeDTO create(Pnae pnae) {
         ModelMapper modelMapper = new ModelMapper();
