@@ -22,6 +22,7 @@ public class Cart {
     private Long licitacao;
     private Long fornecedor;
     private String unidade;
+    private String processo;
     private Long cod;
     private String alias;
     private Double quantidade;

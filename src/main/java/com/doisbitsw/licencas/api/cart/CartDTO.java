@@ -14,6 +14,7 @@ public class CartDTO {
     private String nomeescola;
     private String nomefornecedor;
     private String unidade;
+    private String processo;
     private Long cod;
     private String alias;
     private Double quantidade;
