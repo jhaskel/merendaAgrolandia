@@ -22,6 +22,7 @@ public class Estoque {
     private String alias;
     private Double quantidade;
     private String unidade;
+    private String processo;
     private Long categoria;
     private Long licitacao;
     private Long fornecedor;

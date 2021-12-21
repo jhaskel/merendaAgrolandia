@@ -16,6 +16,7 @@ public class EstoqueDTO {
     private Long licitacao;
     private Long fornecedor;
     private Boolean agrofamiliar;
+    private String processo;
     private Double valor;
     private Long ano;
     private String createdAt;
