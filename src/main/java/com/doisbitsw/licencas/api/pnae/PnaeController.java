@@ -28,10 +28,10 @@ public class PnaeController {
         return ResponseEntity.ok(carro);
     }
 
-  /*  @GetMapping("/soma/{ano}")
+    @GetMapping("/soma/{ano}")
     public double getRep(@PathVariable("ano") Long ano) {
         return service.getSoma(ano);
-    }*/
+    }
 
     @GetMapping("/ano/{ano}")
     public ResponseEntity getAno(@PathVariable("ano") Long ano) {

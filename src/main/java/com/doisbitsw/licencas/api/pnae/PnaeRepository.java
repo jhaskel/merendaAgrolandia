@@ -14,8 +14,8 @@ public interface PnaeRepository extends JpaRepository<Pnae, Long> {
     @Query(value = "SELECT * FROM pnae WHERE ano = :ano ", nativeQuery = true)
     List<Pnae> findAno(Long ano);
 
-   /* @Query(value = "SELECT sum(valor) as soma  FROM pnae \n" +
+    @Query(value = "SELECT sum(valor) as soma  FROM pnae \n" +
             "WHERE    ano = :ano ", nativeQuery = true)
-    double findSoma(Long ano);*/
+    double findSoma(Long ano);
 
 }
