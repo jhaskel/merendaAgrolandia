@@ -162,7 +162,8 @@ public interface ItensRepository extends JpaRepository<Itens, Long> {
 
     @Query(value = "SELECT sum(ite.total) as tot  FROM itens ite\n" +
             "INNER JOIN af ON af.code = ite.af\n" +
-            "WHERE af.isativo= true   and ite.ano = :ano AND ite.af > 0 AND ite.escola = :escola ", nativeQuery = true)
+            "INNER JOIN categoria cat ON cat.id = ite.categoria\n" +
+            "WHERE af.isativo= true  AND cat.isalimento = true and ite.ano = :ano AND ite.af > 0 AND ite.escola = :escola ", nativeQuery = true)
     double findTotalEscola(Long escola,Long ano);
 
 
