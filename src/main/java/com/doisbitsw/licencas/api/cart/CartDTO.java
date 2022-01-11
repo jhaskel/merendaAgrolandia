@@ -8,6 +8,7 @@ public class CartDTO {
     private Long id;
     private Long escola;
     private Long produto;
+    private Long idestoque;
     private Long fornecedor;
     private Long categoria;
     private Long licitacao;

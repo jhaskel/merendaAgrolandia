@@ -18,6 +18,7 @@ public class Cart {
     private Long id;
     private Long escola;
     private Long produto;
+    private Long idestoque;
     private Long categoria;
     private Long licitacao;
     private Long fornecedor;
