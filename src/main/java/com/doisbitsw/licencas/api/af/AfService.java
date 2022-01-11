@@ -42,9 +42,15 @@ public class AfService {
     }
 
 
+    public List<AfDTO> getStatus(String status) {
+        return rep.findStatus(status).stream().map(AfDTO::create).collect(Collectors.toList());
+    }
+
+
     public List<AfDTO> getSetor(Long setor) {
         return rep.findSetor(setor).stream().map(AfDTO::create).collect(Collectors.toList());
     }
+
 
     public List<AfDTO> getId(Long code) {
         return rep.findId(code).stream().map(AfDTO::create).collect(Collectors.toList());

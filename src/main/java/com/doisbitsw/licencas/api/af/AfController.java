@@ -50,6 +50,15 @@ public class AfController {
                 ResponseEntity.ok(afs);
     }
 
+    //busca as af pelo status
+    @GetMapping("/status/{status}")
+    public ResponseEntity getStatus(@PathVariable("status") String status) {
+        List<AfDTO> afs = service.getStatus(status);
+        return afs.isEmpty() ?
+                ResponseEntity.noContent().build() :
+                ResponseEntity.ok(afs);
+    }
+
     //busca as af por fornecedores
     @GetMapping("/setor/{setor}")
     public ResponseEntity getSetor(@PathVariable("setor") Long setor) {
