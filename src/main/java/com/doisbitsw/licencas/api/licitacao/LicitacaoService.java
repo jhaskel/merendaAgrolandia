@@ -46,15 +46,20 @@ public class LicitacaoService {
         if(optional.isPresent()) {
             Licitacao db = optional.get();
             // Copiar as propriedades
-           /*
-            db.setEscola(cart.getEscola());
-            db.setProduto(cart.getProduto());
-            db.setCategoria(cart.getCategoria());
-            db.setFornecedor(cart.getFornecedor());
-            db.setUnidade(cart.getUnidade());
-            db.setCod(cart.getCod());
-            db.setProcesso(cart.getProcesso());
-            */
+
+
+            db.setAno(licitacao.getAno());
+            db.setProcesso(licitacao.getProcesso());
+            db.setIsativo(licitacao.getIsativo());
+            db.setModifiedAt(licitacao.getModifiedAt());
+            db.setEdital(licitacao.getEdital());
+            db.setAlias(licitacao.getAlias());
+            db.setHomologadoAt(licitacao.getHomologadoAt());
+            db.setObjeto(licitacao.getObjeto());
+            db.setPrazo(licitacao.getPrazo());
+            db.setValorfinal(licitacao.getValorfinal());
+
+
 
             /*db.setValor(cart.getValor());*/
 
