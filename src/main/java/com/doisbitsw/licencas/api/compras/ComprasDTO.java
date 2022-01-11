@@ -12,6 +12,7 @@ public class ComprasDTO {
     private Long setor;
     private Long nivel;
     private Long produto;
+    private Long idestoque;
     private String alias;
     private String nomeescola;
     private String nomenivel;

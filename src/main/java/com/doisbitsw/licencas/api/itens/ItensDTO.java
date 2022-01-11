@@ -9,6 +9,7 @@ public class ItensDTO {
     private Long setor;
     private Long escola;
     private Long produto;
+    private Long idestoque;
     private Long cod;
     private String alias;
     private Long categoria;
