@@ -27,6 +27,7 @@ public class AlmoxarifadoAd {
     private String nomeescola;
     private Double quantidade;
     private Boolean isativo;
+    private Boolean istroca;
 
 
 

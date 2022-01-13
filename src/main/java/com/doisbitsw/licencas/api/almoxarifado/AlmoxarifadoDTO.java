@@ -18,6 +18,7 @@ public class AlmoxarifadoDTO {
     private String nomeescola;
     private Double quantidade;
     private Boolean isativo;
+    private Boolean istroca;
 
     //não no banco
     private Long quant;

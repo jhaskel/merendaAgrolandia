@@ -18,6 +18,7 @@ public class AlmoxarifadoAdDTO {
     private String nomeescola;
     private Double quantidade;
     private Boolean isativo;
+    private Boolean istroca;
 
 
 

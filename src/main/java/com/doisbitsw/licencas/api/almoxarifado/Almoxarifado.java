@@ -27,6 +27,7 @@ public class Almoxarifado {
     private String obs;
     private Double quantidade;
     private Boolean isativo;
+    private Boolean istroca;
 
     //não no banco
     private Long quant;

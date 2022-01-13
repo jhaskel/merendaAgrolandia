@@ -44,6 +44,7 @@ public class AlmoxarifadoAdService {
             db.setIsativo(almoxarifadoAd.getIsativo());
             db.setLicitacao(almoxarifadoAd.getLicitacao());
             db.setObs(almoxarifadoAd.getObs());
+            db.setIstroca(almoxarifadoAd.getIstroca());
 
             System.out.println("Carro id " + db.getId());
 
