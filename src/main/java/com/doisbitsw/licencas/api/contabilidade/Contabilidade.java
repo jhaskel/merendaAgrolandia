@@ -22,6 +22,7 @@ public class Contabilidade {
     private String nomeUnidade;
     private Long projeto;
     private String nomeProjeto;
+    private String nomeReceita;
     private Long cod;
     private Long code;
     private String elemento;
