@@ -26,6 +26,12 @@ public class AlmoxarifadoService {
         return list;
     }
 
+    public List<AlmoxarifadoDTO> getTroca(Long escola) {
+        List<AlmoxarifadoDTO> list = rep.findTroca(escola).stream().map(AlmoxarifadoDTO::create).collect(Collectors.toList());
+        return list;
+    }
+
+
 
 
     public AlmoxarifadoDTO getCarroById(Long id) {
