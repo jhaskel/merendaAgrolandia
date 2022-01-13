@@ -27,9 +27,9 @@ public class AlmoxarifadoController {
         return ResponseEntity.ok(carros);
     }
 
-    @GetMapping("troca/{escola}")
-    public ResponseEntity getTroca(@PathVariable("escola") Long escola) {
-        List<AlmoxarifadoDTO> carros = service.getTroca(escola);
+    @GetMapping("troca")
+    public ResponseEntity getTroca() {
+        List<AlmoxarifadoDTO> carros = service.getTroca();
         return ResponseEntity.ok(carros);
     }
 

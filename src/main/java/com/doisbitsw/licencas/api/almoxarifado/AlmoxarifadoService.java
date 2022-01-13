@@ -26,19 +26,15 @@ public class AlmoxarifadoService {
         return list;
     }
 
-    public List<AlmoxarifadoDTO> getTroca(Long escola) {
-        List<AlmoxarifadoDTO> list = rep.findTroca(escola).stream().map(AlmoxarifadoDTO::create).collect(Collectors.toList());
+    public List<AlmoxarifadoDTO> getTroca() {
+        List<AlmoxarifadoDTO> list = rep.findTroca().stream().map(AlmoxarifadoDTO::create).collect(Collectors.toList());
         return list;
     }
-
-
-
 
     public AlmoxarifadoDTO getCarroById(Long id) {
         Optional<Almoxarifado> carro = rep.findById(id);
         return carro.map(AlmoxarifadoDTO::create).orElseThrow(() -> new ObjectNotFoundException("Carro não encontrado"));
     }
-
 
     public AlmoxarifadoDTO insert(Almoxarifado pedidoAlmoxarifado) {
         Assert.isNull(pedidoAlmoxarifado.getId(),"Não foi possível inserir o registro");
