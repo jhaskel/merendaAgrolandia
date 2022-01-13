@@ -14,6 +14,7 @@ public class AlmoxarifadoDTO {
     private Long categoria;
     private String unidade;
     private String created;
+    private String obs;
     private String nomeescola;
     private Double quantidade;
     private Boolean isativo;

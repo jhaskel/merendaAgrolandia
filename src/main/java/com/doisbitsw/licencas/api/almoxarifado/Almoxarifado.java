@@ -24,6 +24,7 @@ public class Almoxarifado {
     private String unidade;
     private String created;
     private String nomeescola;
+    private String obs;
     private Double quantidade;
     private Boolean isativo;
 

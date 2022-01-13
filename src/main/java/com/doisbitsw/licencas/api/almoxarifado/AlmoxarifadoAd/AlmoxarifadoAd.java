@@ -22,6 +22,7 @@ public class AlmoxarifadoAd {
     private String alias;
     private Long categoria;
     private String unidade;
+    private String obs;
     private String created;
     private String nomeescola;
     private Double quantidade;
