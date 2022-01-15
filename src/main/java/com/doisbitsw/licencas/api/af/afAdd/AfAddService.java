@@ -53,6 +53,7 @@ public class AfAddService {
             db.setDespesa(afAdd.getDespesa());
             db.setDespesax(afAdd.getDespesax());
             db.setIsdespesa(afAdd.getIsdespesa());
+            db.setEmpenho(afAdd.getEmpenho());
 
 
 

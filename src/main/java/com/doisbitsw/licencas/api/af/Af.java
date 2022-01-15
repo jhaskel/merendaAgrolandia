@@ -23,6 +23,7 @@ public class Af {
     private Long nivel;
     private Long fornecedor;
     private String status;
+    private String empenho;
     private Boolean isenviado;
     private String createdAt;
     private Boolean isativo;

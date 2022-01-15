@@ -18,6 +18,7 @@ public class AfAddDTO {
     private Long despesa;
     private Long despesax;
     private Boolean isdespesa;
+    private String empenho;
 
 
 
