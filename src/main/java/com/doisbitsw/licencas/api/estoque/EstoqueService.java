@@ -35,6 +35,11 @@ public class EstoqueService {
     public List<EstoqueDTO> getEstoqueByUnidade(Long setor) {
         return rep.findEstoqueByUnidade(setor).stream().map(EstoqueDTO::create).collect(Collectors.toList());
     }
+
+
+    public List<EstoqueDTO> getFornecedor(Long fornecedor) {
+        return rep.findFornecedor(fornecedor).stream().map(EstoqueDTO::create).collect(Collectors.toList());
+    }
     public List<EstoqueDTO> getLicitacao(Long licitacao) {
         return rep.findLicitacao(licitacao).stream().map(EstoqueDTO::create).collect(Collectors.toList());
     }
