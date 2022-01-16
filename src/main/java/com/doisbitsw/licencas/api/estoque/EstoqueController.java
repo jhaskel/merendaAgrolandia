@@ -44,7 +44,7 @@ public class EstoqueController {
                 ResponseEntity.noContent().build() :
                 ResponseEntity.ok(produtos);
     }
-    @GetMapping("/estoque/fornecedor/{fornecedor}")
+    @GetMapping("/fornecedor/{fornecedor}")
     public ResponseEntity getFornecedor(@PathVariable("fornecedor") Long fornecedor) {
         List<EstoqueDTO> produtos = service.getFornecedor(fornecedor);
         return produtos.isEmpty() ?
