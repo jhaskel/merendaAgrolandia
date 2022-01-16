@@ -59,8 +59,12 @@ public interface EstoqueRepository extends JpaRepository<Estoque, Long> {
     List<Estoque> findFornecedor(Long fornecedor);
 
 
-    @Query(value = "SELECT * FROM estoque p\n" +
-            "WHERE p.isativo = true and p.id NOT IN (SELECT produto FROM itens ) ORDER BY p.categoria,p.alias", nativeQuery = true)
+    @Query(value = "SELECT *,SUM(p.quantidade) AS comprado,p.unidade as nomecategoria,p.unidade as nomelicitacao \n" +
+            "FROM estoque p\n" +
+            "INNER JOIN licitacao lic ON lic.id = p.licitacao\n" +
+            "WHERE p.isativo = true and lic.isativo = true and p.id NOT IN (SELECT produto FROM itens)\n" +
+            "GROUP BY p.id \n" +
+            "ORDER BY p.categoria,p.alias", nativeQuery = true)
     List<Estoque> findMenos();
 
     @Query(value = "select * from estoque  where id = :id", nativeQuery = true)
