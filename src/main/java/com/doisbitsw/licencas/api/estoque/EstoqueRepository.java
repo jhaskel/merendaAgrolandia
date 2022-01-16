@@ -39,7 +39,7 @@ public interface EstoqueRepository extends JpaRepository<Estoque, Long> {
             "ORDER BY est.isativo DESC,est.categoria,est.alias", nativeQuery = true)
     List<Estoque> findEstoqueByUnidade(Long setor);
 
-    @Query(value = "SELECT est.*,SUM(ite.quantidade) AS comprado,cat.nome as nomecategoria,lic.alias as nomelicitacao\n" +
+    @Query(value = "SELECT est.*,SUM(ite.quantidade) AS comprado,cat.nome as nomecategoria,forn.alias as nomelicitacao\n" +
             "FROM estoque est\n" +
             "left JOIN itens ite ON ite.idestoque = est.id\n" +
             "INNER JOIN categoria cat ON cat.id = est.categoria\n" +
