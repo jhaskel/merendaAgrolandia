@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface PnaeRepository extends JpaRepository<Pnae, Long> {
 
-    @Query(value = "SELECT * FROM pnae WHERE ano = 2021", nativeQuery = true)
+    @Query(value = "SELECT * FROM pnae WHERE ano = 2021 order by id desc", nativeQuery = true)
     List<Pnae> findAll(Long ano);
 
     @Query(value = "SELECT * FROM pnae WHERE ano = :ano ", nativeQuery = true)
