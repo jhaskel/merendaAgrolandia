@@ -52,7 +52,7 @@ public class PnaeService {
             db.setValor(pnae.getValor());
             db.setCidade(pnae.getCidade());
             db.setCreated(pnae.getCreated());
-            db.setNivel(pnae.getNivel());
+
 
             System.out.println("Nivel id " + db.getId());
             rep.save(db);

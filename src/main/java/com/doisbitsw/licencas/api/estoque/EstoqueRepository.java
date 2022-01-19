@@ -64,7 +64,7 @@ public interface EstoqueRepository extends JpaRepository<Estoque, Long> {
             "INNER JOIN licitacao lic ON lic.id = p.licitacao\n" +
             "WHERE p.isativo = true and lic.isativo = true and p.id NOT IN (SELECT produto FROM itens)\n" +
             "GROUP BY p.id \n" +
-            "ORDER BY p.categoria,p.alias", nativeQuery = true)
+            "ORDER BY p.licitacao,p.categoria,p.alias", nativeQuery = true)
     List<Estoque> findMenos();
 
     @Query(value = "select * from estoque  where id = :id", nativeQuery = true)
