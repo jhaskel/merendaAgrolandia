@@ -10,6 +10,7 @@ public class CartDTO {
     private Long produto;
     private Long idestoque;
     private Long fornecedor;
+    private String nomeproduto;
     private Long categoria;
     private Long licitacao;
     private String nomeescola;

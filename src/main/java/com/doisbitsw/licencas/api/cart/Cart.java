@@ -26,6 +26,7 @@ public class Cart {
     private String processo;
     private Long cod;
     private String alias;
+    private String nomeproduto;
     private Double quantidade;
     private Double valor;
     private Double total;

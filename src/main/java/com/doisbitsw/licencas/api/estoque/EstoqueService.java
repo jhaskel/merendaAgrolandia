@@ -80,6 +80,8 @@ public class EstoqueService {
             db.setIsativo(estoque.getIsativo());
             db.setValor(estoque.getValor());
             db.setProcesso(estoque.getProcesso());
+            db.setNomeproduto(estoque.getNomeproduto());
+
 
             System.out.println("Produto id " + db.getId());
 

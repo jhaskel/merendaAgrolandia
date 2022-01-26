@@ -24,6 +24,7 @@ public class Compras {
     private Long produto;
     private Long idestoque;
     private String alias;
+    private String nomeproduto;
     private String nomeescola;
     private String nomenivel;
     private String unidade;

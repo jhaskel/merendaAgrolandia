@@ -20,6 +20,7 @@ public class Estoque {
     private Long setor;
     private Long code;
     private String alias;
+    private String nomeproduto;
     private Double quantidade;
     private String unidade;
     private String processo;
