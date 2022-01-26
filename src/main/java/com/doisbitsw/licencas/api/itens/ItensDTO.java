@@ -18,7 +18,7 @@ public class ItensDTO {
     private String unidade;
     private Long ano;
     private Long af;
-    private String pedido;
+    private Long pedido;
     private String created;
     private String nomeescola;
     private String nomenivel;
