@@ -12,7 +12,6 @@ public class ItensDTO {
     private Long idestoque;
     private Long cod;
     private String alias;
-    private String nomeproduto;
     private Long categoria;
     private Long fornecedor;
     private Long nivel;
