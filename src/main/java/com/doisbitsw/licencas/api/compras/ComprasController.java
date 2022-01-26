@@ -39,7 +39,7 @@ public class ComprasController {
         return ResponseEntity.ok(carro);
     }
     @GetMapping("/pedido/{pedido}")
-    public ResponseEntity getCarrosByPedido(@PathVariable("pedido") String pedido) {
+    public ResponseEntity getCarrosByPedido(@PathVariable("pedido") Long pedido) {
         List<ComprasDTO> carros = service.getCarrosByPedido(pedido);
         return carros.isEmpty() ?
                 ResponseEntity.noContent().build() :
@@ -50,7 +50,7 @@ public class ComprasController {
 
 
     @GetMapping("/cart/{pedido}")
-    public ResponseEntity getCarrosByPedidoAll(@PathVariable("pedido") String pedido) {
+    public ResponseEntity getCarrosByPedidoAll(@PathVariable("pedido") Long pedido) {
         List<ComprasDTO> carros = service.getCarrosByPedidoAll(pedido);
         return carros.isEmpty() ?
                 ResponseEntity.noContent().build() :
@@ -229,7 +229,7 @@ public class ComprasController {
     }
 
     @GetMapping("/totalPedido/{pedido}")
-    public double getTotalPedido(@PathVariable("pedido") String pedido) {
+    public double getTotalPedido(@PathVariable("pedido") Long pedido) {
         return service.getTotalPedido(pedido);
     }
 

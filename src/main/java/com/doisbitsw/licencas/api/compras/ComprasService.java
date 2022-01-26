@@ -36,12 +36,12 @@ public class ComprasService {
     }
 
 
-    public List<ComprasDTO> getCarrosByPedido(String pedido) {
+    public List<ComprasDTO> getCarrosByPedido(Long pedido) {
         return rep.findByPedido(pedido).stream().map(ComprasDTO::create).collect(Collectors.toList());
     }
 
 
-    public List<ComprasDTO> getCarrosByPedidoAll(String pedido) {
+    public List<ComprasDTO> getCarrosByPedidoAll(Long pedido) {
         return rep.findByPedidoAll(pedido).stream().map(ComprasDTO::create).collect(Collectors.toList());
     }
 
@@ -162,7 +162,7 @@ public class ComprasService {
         return rep.findTotalAgro(ano);
     }
 
-    public double getTotalPedido(String pedido){
+    public double getTotalPedido(Long pedido){
         return rep.findTotalPedido(pedido);
     }
 

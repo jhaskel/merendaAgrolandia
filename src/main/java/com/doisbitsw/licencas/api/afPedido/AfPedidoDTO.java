@@ -8,7 +8,7 @@ public class AfPedidoDTO {
     private Long id;
     private Long af;
     private Long setor;
-    private String pedido;
+    private Long pedido;
     private Double total;
     private Long nivel;
     private Long fornecedor;
