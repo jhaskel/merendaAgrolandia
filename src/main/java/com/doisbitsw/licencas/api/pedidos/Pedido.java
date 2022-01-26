@@ -19,6 +19,7 @@ public class Pedido {
     private Long escola;
     private Double total;
     private String status;
+    private String user;
     private Boolean isaf;
     private String createdAt;
     private String modifiedAt;

@@ -7,6 +7,7 @@ import org.modelmapper.ModelMapper;
 public class PedidoAddDTO {
     private Long id;
     private Long escola;
+    private String user;
     private Double total;
     private String status;
     private Boolean isaf;
@@ -14,8 +15,6 @@ public class PedidoAddDTO {
     private String modifiedAt;
     private Boolean isativo;
     private Boolean ischeck;
-
-
 
 
 

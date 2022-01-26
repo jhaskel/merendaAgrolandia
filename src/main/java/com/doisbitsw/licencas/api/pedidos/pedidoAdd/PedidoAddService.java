@@ -43,6 +43,7 @@ public class PedidoAddService {
             db.setModifiedAt(pedido.getModifiedAt());
             db.setStatus(pedido.getStatus());
             db.setIsaf(pedido.getIsaf());
+            db.setUser(pedido.getUser());
             db.setTotal(pedido.getTotal());
             db.setIscheck(pedido.getIscheck());
             System.out.println("Pedido id " + db.getId());

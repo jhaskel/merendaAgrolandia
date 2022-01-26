@@ -14,6 +14,7 @@ public class PedidoDTO {
     private String modifiedAt;
     private Boolean isativo;
     private Boolean ischeck;
+    private String user;
 
     private Long totalCart;
     private Long temCart;
