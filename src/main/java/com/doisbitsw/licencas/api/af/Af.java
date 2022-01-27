@@ -29,6 +29,7 @@ public class Af {
     private Boolean isativo;
     private Boolean isdespesa;
     private String processo;
+    private Long licitacao;
 
     //não esta no banco
     private String nomefor;

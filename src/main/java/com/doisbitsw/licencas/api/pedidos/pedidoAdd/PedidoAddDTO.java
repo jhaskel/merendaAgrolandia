@@ -15,6 +15,7 @@ public class PedidoAddDTO {
     private String modifiedAt;
     private Boolean isativo;
     private Boolean ischeck;
+    private Long licitacao;
 
 
 

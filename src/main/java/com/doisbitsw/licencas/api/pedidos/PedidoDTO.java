@@ -15,6 +15,7 @@ public class PedidoDTO {
     private Boolean isativo;
     private Boolean ischeck;
     private String user;
+    private Long licitacao;
 
     private Long totalCart;
     private Long temCart;

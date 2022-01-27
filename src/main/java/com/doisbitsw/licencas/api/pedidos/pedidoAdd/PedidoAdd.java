@@ -18,6 +18,7 @@ public class PedidoAdd {
     private Long id;
     private Long escola;
     private String user;
+    private Long licitacao;
     private Double total;
     private String status;
     private Boolean isaf;

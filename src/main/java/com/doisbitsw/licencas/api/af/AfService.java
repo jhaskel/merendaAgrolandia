@@ -92,6 +92,7 @@ public class AfService {
             db.setCreatedAt(af.getCreatedAt());
             db.setNivel(af.getNivel());
             db.setEmpenho(af.getEmpenho());
+            db.setLicitacao(af.getLicitacao());
 
 
             System.out.println("Af id " + db.getId());

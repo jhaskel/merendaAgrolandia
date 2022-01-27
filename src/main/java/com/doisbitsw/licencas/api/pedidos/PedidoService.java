@@ -70,6 +70,7 @@ public class PedidoService {
             db.setUser(pedido.getUser());
             db.setIsativo(pedido.getIsativo());
             db.setIscheck(pedido.getIscheck());
+            db.setLicitacao(pedido.getLicitacao());
             System.out.println("Pedido id " + db.getId());
 
             // Atualiza o pedido

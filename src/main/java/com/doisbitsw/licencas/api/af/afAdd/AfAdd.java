@@ -29,6 +29,7 @@ public class AfAdd {
     private Long despesa;
     private Long despesax;
     private Boolean isdespesa;
+    private Long licitacao;
 
 
 
