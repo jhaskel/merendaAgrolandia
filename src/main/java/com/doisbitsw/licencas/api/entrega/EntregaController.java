@@ -9,7 +9,7 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/cardapio")
+@RequestMapping("/api/v1/entrega")
 public class EntregaController {
     @Autowired
     private EntregaService service;
