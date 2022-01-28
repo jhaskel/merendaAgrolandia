@@ -62,6 +62,7 @@ public class EntregaService {
             db.setFornecedor(entrega.getFornecedor());
             db.setQuantidade(entrega.getQuantidade());
             db.setValor(entrega.getValor());
+            db.setNomeescola(entrega.getNomeescola());
             System.out.println("Cardapio id " + db.getId());
 
             // Atualiza o cardapio
