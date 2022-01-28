@@ -36,13 +36,6 @@ public class EntregaController {
                 ResponseEntity.ok(cardapio);
     }
 
-    @GetMapping("/ordem/{ordem}")
-    public ResponseEntity getNivel(@PathVariable("ordem") Long ordem) {
-        List<EntregaDTO> carros = service.getOrdem(ordem);
-        return carros.isEmpty() ?
-                ResponseEntity.noContent().build() :
-                ResponseEntity.ok(carros);
-    }
 
     @PostMapping
     public ResponseEntity post(@RequestBody Entrega entrega) {

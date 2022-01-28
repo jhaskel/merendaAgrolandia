@@ -27,9 +27,6 @@ public class EntregaService {
     }
 
 
-    public List<EntregaDTO> getOrdem(Long ordem) {
-        return rep.findOrdem(ordem).stream().map(EntregaDTO::create).collect(Collectors.toList());
-    }
 
 
     public EntregaDTO insert(Entrega entrega) {
