@@ -1,5 +1,6 @@
 package com.doisbitsw.licencas.api.entrega;
 
+import com.doisbitsw.licencas.api.contabilidade.ContabilidadeDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -33,6 +34,14 @@ public class EntregaController {
         return cardapio.isEmpty() ?
                 ResponseEntity.noContent().build() :
                 ResponseEntity.ok(cardapio);
+    }
+
+    @GetMapping("/ordem/{ordem}")
+    public ResponseEntity getNivel(@PathVariable("ordem") Long ordem) {
+        List<EntregaDTO> carros = service.getOrdem(ordem);
+        return carros.isEmpty() ?
+                ResponseEntity.noContent().build() :
+                ResponseEntity.ok(carros);
     }
 
     @PostMapping

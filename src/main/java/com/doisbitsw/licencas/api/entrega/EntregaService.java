@@ -1,5 +1,6 @@
 package com.doisbitsw.licencas.api.entrega;
 
+import com.doisbitsw.licencas.api.contabilidade.ContabilidadeDTO;
 import com.doisbitsw.licencas.api.infra.exception.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,6 +24,11 @@ public class EntregaService {
     public EntregaDTO getCardapioById(Long id) {
         Optional<Entrega> carro = rep.findById(id);
         return carro.map(EntregaDTO::create).orElseThrow(() -> new ObjectNotFoundException("Cardapio não encontrado"));
+    }
+
+
+    public List<EntregaDTO> getOrdem(Long ordem) {
+        return rep.findOrdem(ordem).stream().map(EntregaDTO::create).collect(Collectors.toList());
     }
 
 
