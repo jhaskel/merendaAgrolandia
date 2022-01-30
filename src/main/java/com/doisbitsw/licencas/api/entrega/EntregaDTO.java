@@ -13,6 +13,7 @@ public class EntregaDTO {
     private String dia;
     private String nomeescola;
     private Long produto;
+    private Long categoria;
     private Long licitacao;
     private String alias;
     private Double valor;

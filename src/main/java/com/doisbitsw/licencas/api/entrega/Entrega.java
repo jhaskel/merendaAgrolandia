@@ -25,6 +25,7 @@ public class Entrega {
     private String nomeescola;
     private Long produto;
     private Long licitacao;
+    private Long categoria;
     private String alias;
     private Double valor;
     private String unidade;

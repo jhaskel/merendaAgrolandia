@@ -72,6 +72,7 @@ public class EntregaService {
             db.setIsrecebido(entrega.getIsrecebido());
             db.setAlias(entrega.getAlias());
             db.setLicitacao(entrega.getLicitacao());
+            db.setCategoria(entrega.getCategoria());
             System.out.println("Cardapio id " + db.getId());
 
             // Atualiza o cardapio
