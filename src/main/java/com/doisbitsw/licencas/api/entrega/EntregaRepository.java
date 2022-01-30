@@ -17,8 +17,8 @@ public interface EntregaRepository extends JpaRepository<Entrega, Long> {
     List<Entrega> findOrdem(Long ordem);
 
 
-    @Query(value = "SELECT * FROM entrega WHERE pedido = :pedido order by dia,produto ", nativeQuery = true)
-    List<Entrega> findPedido(Long ordem);
+    @Query(value = "SELECT * FROM entrega WHERE pedido = :pedido order by dia,alias", nativeQuery = true)
+    List<Entrega> findPedido(Long pedido);
 
 
 
