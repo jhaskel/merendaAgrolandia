@@ -43,6 +43,15 @@ public class EntregaController {
                 ResponseEntity.ok(cardapio);
     }
 
+    @GetMapping("/pedido/{pedido}")
+    public ResponseEntity getPedido(@PathVariable("pedido") Long pedido) {
+        List<EntregaDTO> cardapio = service.getPedido(pedido);
+        return cardapio.isEmpty() ?
+                ResponseEntity.noContent().build() :
+                ResponseEntity.ok(cardapio);
+    }
+
+
 
 
     @PostMapping

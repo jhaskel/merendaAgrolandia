@@ -31,6 +31,10 @@ public class EntregaService {
         return rep.findOrdem(ordem).stream().map(EntregaDTO::create).collect(Collectors.toList());
     }
 
+    public List<EntregaDTO> getPedido(Long pedido) {
+        return rep.findPedido(pedido).stream().map(EntregaDTO::create).collect(Collectors.toList());
+    }
+
 
 
     public EntregaDTO insert(Entrega entrega) {
