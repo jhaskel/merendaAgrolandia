@@ -1,7 +1,7 @@
 package com.doisbitsw.licencas.api.entrega;
 
 
-import com.doisbitsw.licencas.api.estoque.EstoqueDTO;
+
 import com.doisbitsw.licencas.api.infra.exception.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -38,7 +38,9 @@ public class EntregaService {
 
 
     public EntregaDTO insert(Entrega entrega) {
+
         Assert.isNull(entrega.getId(),"Não foi possível inserir o registro");
+
         return EntregaDTO.create(rep.save(entrega));
     }
 
@@ -69,6 +71,7 @@ public class EntregaService {
             db.setNomeescola(entrega.getNomeescola());
             db.setIsrecebido(entrega.getIsrecebido());
             db.setAlias(entrega.getAlias());
+            db.setLicitacao(entrega.getLicitacao());
             System.out.println("Cardapio id " + db.getId());
 
             // Atualiza o cardapio
