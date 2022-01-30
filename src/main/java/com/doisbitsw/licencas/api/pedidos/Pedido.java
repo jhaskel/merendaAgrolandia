@@ -4,6 +4,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import javax.validation.constraints.Null;
 
 @NoArgsConstructor
 @Data
@@ -25,9 +26,10 @@ public class Pedido {
     private Boolean ischeck;
 
     //não vai pro banco
-    @Column(nullable = false)
+
+    @Null
     private String nomedaescola;
-    @Column(nullable = false)
+    @Null
     private Long idsetor;
 
 
