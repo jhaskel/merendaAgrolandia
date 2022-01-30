@@ -12,7 +12,8 @@ public class EntregaDTO {
     private Long escola;
     private String dia;
     private String nomeescola;
-    private String produto;
+    private Long produto;
+    private String alias;
     private Double valor;
     private String unidade;
     private String fornecedor;
