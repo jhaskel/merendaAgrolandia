@@ -50,7 +50,7 @@ public class PedidoService {
 
 
     public PedidoDTO insert(Pedido pedido) {
-       // Assert.isNull(pedido.getId(),"Não foi possível inserir o registro");
+        Assert.isNull(pedido.getId(),"Não foi possível inserir o registro");
         return PedidoDTO.create(rep.save(pedido));
     }
 
