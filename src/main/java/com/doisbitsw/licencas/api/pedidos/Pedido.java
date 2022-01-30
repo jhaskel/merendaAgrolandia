@@ -3,10 +3,7 @@ package com.doisbitsw.licencas.api.pedidos;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @NoArgsConstructor
 @Data
@@ -28,7 +25,9 @@ public class Pedido {
     private Boolean ischeck;
 
     //não vai pro banco
+    @Column(nullable = false)
     private String nomedaescola;
+    @Column(nullable = false)
     private Long idsetor;
 
 

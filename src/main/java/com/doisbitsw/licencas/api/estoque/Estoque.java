@@ -36,6 +36,7 @@ public class Estoque {
 
 
     //join
+
     private Double comprado;
     private String nomecategoria;
     private String nomelicitacao;
