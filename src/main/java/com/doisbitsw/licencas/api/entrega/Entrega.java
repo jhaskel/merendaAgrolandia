@@ -28,6 +28,8 @@ public class Entrega {
     private String unidade;
     private String fornecedor;
     private Double quantidade;
+    private Boolean isrecebido;
+
 
 
 

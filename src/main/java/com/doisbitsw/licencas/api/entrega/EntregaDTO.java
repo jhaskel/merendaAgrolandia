@@ -17,6 +17,7 @@ public class EntregaDTO {
     private String unidade;
     private String fornecedor;
     private Double quantidade;
+    private Boolean isrecebido;
 
 
     public static EntregaDTO create(Entrega entrega) {
