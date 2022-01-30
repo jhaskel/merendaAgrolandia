@@ -2,6 +2,7 @@ package com.doisbitsw.licencas.api.pedidos;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
 
 import javax.persistence.*;
 import javax.validation.constraints.Null;
@@ -27,9 +28,9 @@ public class Pedido {
 
     //não vai pro banco
 
-    @Null
+    @NonNull
     private String nomedaescola;
-    @Null
+    @NonNull
     private Long idsetor;
 
 
