@@ -240,6 +240,14 @@ public class ItensController {
     }
 
 
+    @GetMapping("/totalEscolaLimpeza/{escola}/{ano}")
+    public double getTotalEscolaLimpeza(@PathVariable("escola") Long escola, @PathVariable("ano") Long ano) {
+
+        return service.getTotalEscolaLimpeza(escola,ano);
+    }
+
+
+
     @GetMapping("/somaAll/{escola}")
     public double getRep(@PathVariable("escola") Long escola) {
         return service.getSoma(escola);

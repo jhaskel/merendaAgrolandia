@@ -153,11 +153,18 @@ public class ItensService {
     }
 
 
-    public double getTotalEscola(Long escola,Long ano){
+    public double getTotalEscolaLimpeza(Long escola,Long ano){
 
-            return rep.findTotalEscola(escola,ano);
+            return rep.findTotalEscolaLimpeza(escola,ano);
 
     }
+
+    public double getTotalEscola(Long escola,Long ano){
+
+        return rep.findTotalEscola(escola,ano);
+
+    }
+
 
 
     public double getSoma(Long escola){
