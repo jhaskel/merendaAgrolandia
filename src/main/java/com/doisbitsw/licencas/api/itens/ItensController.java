@@ -235,6 +235,7 @@ public class ItensController {
 
     @GetMapping("/totalEscola/{escola}/{ano}")
     public double getTotalEscola(@PathVariable("escola") Long escola, @PathVariable("ano") Long ano) {
+
         return service.getTotalEscola(escola,ano);
     }
 
