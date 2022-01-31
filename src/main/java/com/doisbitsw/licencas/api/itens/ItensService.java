@@ -154,13 +154,8 @@ public class ItensService {
 
 
     public double getTotalEscola(Long escola,Long ano){
-        double ik = rep.findTotalEscola(escola, ano);
 
-        if(ik >0){
             return rep.findTotalEscola(escola,ano);
-        }
-
-        return 0.0;
 
     }
 
