@@ -148,6 +148,12 @@ public class ItensService {
     }
 
 
+    public double getTotalLimpeza(Long ano){
+        return rep.findTotalLimpeza(ano);
+    }
+
+
+
     public double getTotalNivel(Long nivel,Long ano){
         return rep.findTotalNivel(nivel,ano);
     }

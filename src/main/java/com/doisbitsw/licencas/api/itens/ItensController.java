@@ -227,6 +227,11 @@ public class ItensController {
         return service.getTotal(ano);
     }
 
+    @GetMapping("/totalLimpeza/{ano}")
+    public double getTotalLimpeza(@PathVariable("ano") Long ano) {
+        return service.getTotalLimpeza(ano);
+    }
+
     @GetMapping("/totalNivel/{nivel}/{ano}")
     public double getTotalNivel(@PathVariable("nivel") Long nivel, @PathVariable("ano") Long ano) {
         return service.getTotalNivel(nivel,ano);
