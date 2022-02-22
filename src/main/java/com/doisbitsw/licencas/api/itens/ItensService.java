@@ -204,7 +204,7 @@ public class ItensService {
         return rep.findTradicional(ano);
     }
 
-
+    //convertido para total de material de limpeza
     public double getTradicionalNivel(Long nivel,Long ano){
         return rep.findTradicionalNivel(nivel,ano);
     }

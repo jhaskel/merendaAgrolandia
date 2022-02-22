@@ -217,6 +217,7 @@ public interface ItensRepository extends JpaRepository<Itens, Long> {
             "OR ite.categoria = 6) AND ite.isagro = FALSE ", nativeQuery = true)
     double findTradicional(Long ano);
 
+    //convertido para total de material de limpeza
     @Query(value = "SELECT sum(ite.total) as tot  \n" +
             "FROM itens ite\n" +
             "INNER JOIN af ON af.code = ite.af\n" +

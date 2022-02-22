@@ -294,7 +294,7 @@ public class ItensController {
     public double getTradicionalNivel(@PathVariable("nivel") Long nivel,@PathVariable("ano") Long ano) {
         return service.getTradicionalNivel(nivel,ano);
     }
-
+    //convertido para total de material de limpeza
     @GetMapping("/tradicionalEscola/{escola}/{ano}")
     public double getTradicionalEscola(@PathVariable("escola") Long escola,@PathVariable("ano") Long ano) {
         return service.getTradicionalEscola(escola,ano);
