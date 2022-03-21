@@ -103,7 +103,6 @@ public class UnidadeEscolarController {
     @DeleteMapping("/{id}")
     public ResponseEntity delete(@PathVariable("id") Long id) {
         service.delete(id);
-
         return ResponseEntity.ok().build();
     }
 }
