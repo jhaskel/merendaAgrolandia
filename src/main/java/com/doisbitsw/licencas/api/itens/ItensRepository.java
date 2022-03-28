@@ -71,11 +71,20 @@ public interface ItensRepository extends JpaRepository<Itens, Long> {
             "ORDER BY tot DESC ,ite.categoria,ite.alias", nativeQuery = true)
     List<Itens> findItensAno(Long ano);
 
+    //somente categorias de alimentos
     @Query(value = "SELECT ite.*,sum(ite.total) AS tot,ite.cod as nomec  FROM itens ite\n" +
+            "INNER JOIN af ON af.code = ite.af\n" +
+            "INNER JOIN categoria cat ON cat.id = ite.categoria\n" +
+            "WHERE af.isativo = TRUE AND ite.ano = :ano AND cat.isalimento=true\n" +
+            "GROUP BY ite.mes ", nativeQuery = true)
+    List<Itens> findTotalMes(Long ano);
+
+   //original com todas as categorias
+    /*@Query(value = "SELECT ite.*,sum(ite.total) AS tot,ite.cod as nomec  FROM itens ite\n" +
             "INNER JOIN af ON af.code = ite.af\n" +
             "WHERE af.isativo = TRUE AND ite.ano = :ano\n" +
             "GROUP BY ite.mes ", nativeQuery = true)
-    List<Itens> findTotalMes(Long ano);
+    List<Itens> findTotalMes(Long ano);*/
 
     @Query(value = "SELECT ite.*,sum(ite.total) AS tot,ite.cod as nomec  FROM itens ite\n" +
             "INNER JOIN af ON af.code = ite.af\n" +
